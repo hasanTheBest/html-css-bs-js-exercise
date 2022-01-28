@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Google Maps API Tutorial</title>
+		<style type="text/css">
+		
+			#mapHolder{
+				width: 100%;
+				height: 500px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Google Map</h1>
+		<div id="mapHolder"></div>
+		
+		<script type="text/javascript">
+			function myMap(){
+				var mapHolder = document.getElementById("mapHolder");
+				var myCenter = new google.maps.LatLng(51.508742,-0.120850);
+				var mapOption = {
+					center : myCenter,
+					zoom : 8
+				};
+				var map = new google.maps.Map(mapHolder, mapOption);
+				var marker = new google.maps.Marker({
+					position: myCenter,
+					animation: google.maps.Animation.BOUNCE
+				});
+				marker.setMap(map);
+				
+				// To active click infowindow this step have to be skipped
+				var infoWindow = new google.maps.InfoWindow({
+						content: "<strong>Mahmudul Hasan, <br> Rajshahi University.</strong>"
+					});
+				infoWindow.open(map, marker);
+				
+				/* When click on Marker, a Informaion winodows appears 
+				google.maps.event.addListener(marker, 'click', function(){
+						var infoWindow = new google.maps.InfoWindow({
+						content: "<strong>Mahmudul Hasan, <br> Rajshahi University.</strong>"
+					});
+					infoWindow.open(map, marker);
+				});
+				*/
+			}
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+	</body>
+</html>

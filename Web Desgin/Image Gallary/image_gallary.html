@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>HTML Image Gallary</title>
+		<meta charset="UTF-8">
+		<meta name="Image Gallary" discription="HTML5, CSS3">
+		<style type="text/css">
+			div#container{
+				width: 100%;
+				height: auto;
+				border: 1px solid green;
+				border-radius: 5px;
+			}
+			div.single{
+				width: 30%;
+				height: auto;
+				position: relative;
+				float: left;
+				margin: 3px;
+			}
+			div.single img{
+				width: 100%;
+				height: auto;
+			}
+			div.discription{
+			margin-left: -10000px;
+			padding: 6px;
+			background-color: azure;
+			
+			border: 1px solid pink;
+			z-index: 1;
+			width: 95%;
+			bottom: 4px;
+			left: 1px;
+			position: absolute;
+			opacity: 0.45;
+			}
+			div.discription span{
+				color: hotpink;
+				font-variant: small-caps;
+				font-size: 95%;
+				text-align: center;
+				line-height: 30px;
+				font-weight: bold;
+			}
+			div.single:hover div.discription{
+				margin-left: 0;
+				display: block;
+			}
+			div.bg{
+				background: url(images/aftab-village.jpg) no-repeat;
+				width: 500px;
+				height: 350px;
+				clear: both;
+			}
+			div.paragraph{
+				border: 1px solid grey;
+				border-radius: 50px 50px 60px 0px;
+				width: 450px;
+				height: 90px;
+				background-color: azure;
+				opacity: 0.55;
+				margin: 20px auto;
+			}
+			div.paragraph p{
+				margin: 15px 10px;
+				font-weight: bold;
+				font-size: 120%;
+				text-align: justify;
+				
+			}
+			div.back{
+				width: 600px;
+				height: 400px;
+				padding: 5px;
+				border: 1px solid purple;
+				border-radius: 600px 600px 0px 600px;
+			}
+			div.back img{
+				width: 100%;
+				height: auto;
+				border-radius: 620px 620px 5px 620px;
+			}
+			div.back p{
+				text-align: center;
+				font-family: sans-serif;
+				font-variant: small-caps;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>This is a Image Gallary</h2>
+		<div id="container">
+			<div class="single">
+				<img src="images/aftab-village.jpg" alt="Aftab"></img>
+				<div class="discription"><span>Here is Image Discription</span></div>
+			</div>
+			<div class="single">
+				<img src="images/aftab-picnic.jpg" alt="Aftab">
+				<div class="discription"><span>Here is Image Discription</span></div>
+			</div>
+			<div class="single">
+				<img src="images/TAMZID.jpg" alt="">
+				<div class="discription"><span>Here is Image Discription</span></div>
+			</div>
+			<div class="single">
+				<img src="images/raju.jpg" alt="Raju">
+				<div class="discription"><span>Here is Image Discription</span></div>
+			</div>
+			<div class="single">
+				<img src="images/raju2.jpg" alt="Raju">
+				<div class="discription"><span>Here is Image Discription</span></div>
+			</div>
+			<div class="single">
+				<img src="images/lalchad.jpg" alt="Lalchad">
+				<div class="discription"><span>Here is Image Discription</span></div>
+			</div>
+			<div class="single">
+				<img src="images/tamzid-zoha.jpg" alt="Tamzid and Joha">
+				<div class="discription"><span>Here is Image Discription</span></div>
+			</div>
+			<div class="single">
+				<img src="images/Rewaz .jpg" alt="Rewaz">
+				<div class="discription"><span>Here is Image Discription</span></div>
+			</div>
+			<div class="single">
+				<img src="images/ashraful.jpg" alt="Ashraful">
+				<div class="discription"><span>Here is Image Discription</span></div>
+			</div>
+			<div class="single">
+				<img src="images/aftab-rakib-tamzid.jpg" alt="Aftab, Tamzid, Rakibul">
+				<div class="discription"><span>Here is Image Discription</span></div>
+			</div>
+		</div>
+		
+		<div class="bg">
+			<div class="paragraph">
+				<p>Here is something exist
+				Here is something exist
+				Here is something exist
+				Here is something exist
+				Here is something exist
+				Here is something exist</p>
+			</div>
+		</div><br>
+		<div class="back">
+			<img src="images/lalchad.jpg" alt="Lalchad">
+			<p>Here is Image Discription<p>
+		</div>
+	</body>
+</html>

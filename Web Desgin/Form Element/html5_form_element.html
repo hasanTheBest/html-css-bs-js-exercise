@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML5 Form Element</title>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			body{
+				margin: 0;
+				padding: 0;
+			}
+			form{
+				width: 450px;
+				height: auto;
+				margin: 0 auto;
+				background-color: silver;
+				padding: 20px;
+			}
+			input{
+				width: 300px;
+				height: 30px;
+				padding: 5px;
+				margin: 8px;
+				box-shadow: inset 1px 3px 5px grey;
+				font-size: 1.1em;
+			}
+			input:focus{
+				border: 2px solid green;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<form action="anotherPage.php" method="post">
+			<h1>HTML5 Form Element (Update)</h1>
+			<table>
+				<tr>
+					<td><a name="firstCell">Name</a></td>
+					<td><input type="text" name="name" placeholder="Your name" required autofocus /></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input type="email" name="email" placeholder="Your Email" required></td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td><input type="password" name="password" placeholder="Your Password" required></td>
+				</tr>
+				<tr>
+					<td>Upload your Image</td>
+					<td><input type="file" required></td>
+				</tr>
+				<tr>
+					<td>Upload your Images</td>
+					<td><input type="file" multiple required></td>
+				</tr>
+				<tr>
+					<td>Your Brithday</td>
+					<td><input type="date" name="date" max="2020-12-30" min="1995-08-01" required></td>
+				</tr>
+				<tr>
+					<td>Your Brithday (Withe week)</td>
+					<td><input type="week" name="week"max="2020-12-30" min="1995-08-01"/></td>
+				</tr>
+				<tr>
+					<td>Your Brithday (with Month)</td>
+					<td><input type="month" name="month" max="2020-12-30" min="1995-08-01"></td>
+				</tr>
+				<tr>
+					<td>Your Brithday (Time)</td>
+					<td><input type="time" name="time"></td>
+				</tr>
+				<tr>
+					<td>Your Brithday (Date and Local Time)</td>
+					<td><input type="datetime-local" name="loclTime"></td>
+				</tr>
+				<tr>
+					<td>Your Website</td>
+					<td><input type="url" name="Website" placeholder="Enter Website Name"></td>
+				</tr>
+				<tr>
+					<td>Rate our site</td>
+					<td><input type="number" name="siteRating" max="10" min="0"></td>
+				</tr>
+				<tr>
+					<td>Search Something</td>
+					<td><input type="search" name="inquiry" placeholder="Search Here"/></td>
+				</tr>
+				<tr>
+					<td>Select Your Bike</td>
+					<td>
+						<select name="cars">
+							<option value="Pulser">Pulser</option>
+							<option value="Runnner">Runner</option>
+							<option value="Appache" selected>Appache</option>
+							<option value="Yamah">Yamah</option>
+							<option value="Bajaj">Bajaj</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Select your favourite hero</td>
+					<td>
+						<select name="hero">
+							<optgroup label="Hindi">
+								<option value="salman">Salman</option>
+								<option value="shahrukh">Shahrukh</option>
+								<option value="amir">Amir</option>
+								<option value="saif">Saif</option>
+							</optgroup>
+							<optgroup label="English">
+								<option value="salman">Achilis</option>
+								<option value="shahrukh">Shahrukh</option>
+								<option value="amir">Amir</option>
+								<option value="saif">Saif</option>
+							</optgroup>
+							<optgroup label="Bangla">
+								<option value="shakib">Shakib</option>
+								<option value="annonta">annota</option>
+								<option value="amir">Amir</option>
+								<option value="saif">Saif</option>
+							</optgroup>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Select Your Country</td>
+					<td>
+						<input list="countryList"/>
+						<datalist id="countryList">
+							<option value="America">America</option>
+							<option value="England">England</option>
+							<option value="Brazi">Brazil</option>
+							<option value="Argentina">Argentina</option>
+							<option value="Pakistan">Pakistan</option>
+							
+						</datalist>
+					</td>
+				</tr>
+				<tr>
+					<td><a href="#firstCell">Top</a></td>
+					<td><input type="submit" value="Submit"></td>
+				</tr>
+			</table>
+			<span>Select Color:</span><input type="color"/></br>
+			<span>Rate our Site:</span><input type="range" min="0" max="10" step="4" value="2"/>
+		</form>
+	</body>
+</html>

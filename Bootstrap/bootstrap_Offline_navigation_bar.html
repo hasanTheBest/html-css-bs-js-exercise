@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Bootstrap Offline Navigaiton Bar</title>
+		
+		<link href="bootstrap.min.css" rel="stylesheet" type="text/css">
+		<style type="text/css">
+			.navbar-inverse{
+				background: orangered;
+				border: none;
+			}
+			.navbar > .container-fluid .navbar-brand{
+				margin-left: 12px;
+			}
+			.navbar-inverse .navbar-brand {
+				color: orangered;
+				font-weight: bold;
+				transition: transform 500ms ease;
+			}
+			.navbar-inverse .custom-brand{
+				    background: white none repeat scroll 0 0;
+					border-radius: 50%;
+					display: block;
+					height: 50px;
+					margin: 0 16px;
+					width: 115px;
+					position: relative;
+					
+			}
+			.navbar-inverse .navbar-brand:hover {
+				transform: scale(1.5);
+				color: orangered;
+			}
+			.navbar-inverse .navbar-nav > li > a{
+				color: white;
+			}
+			.navbar-inverse .navbar-nav > li > a:hover{
+				color: orangered;
+				background: white;
+			}
+			.navbar-inverse .navbar-nav .active > a{
+				color: orangered;
+				background: white;
+			}
+			.navbar-inverse .navbar-nav .active > a:hover{
+				color: orangered;
+				background: white;
+			}
+			.navbar-form > button{
+				border: 2px solid white;
+				background: orangered;
+			}
+			.navbar-form > button:hover{
+				border: 2px solid red;
+				background: white;
+				color: orangered;
+			}
+			.navbar-inverse .navbar-toggle {
+				border-color: #FBF4F4;
+			}
+			.navbar-inverse .navbar-toggle:hover {
+				border-color: red;
+			}
+			.navbar-inverse .navbar-toggle:hover  .icon-bar{
+				color: orangered;
+			}
+			.page-header{
+				margin-top: 100px;
+			}
+			
+			
+		</style>
+	</head>
+	
+	<body>
+		<div class="page-header">
+			<h1 class="text-center text-danger">Bootstrap Navigation Bar with Drop Down Menu</h1>
+		</div>
+		
+		<!--Navigation Bar-->
+		
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					
+					<button class="collapsed navbar-toggle" data-toggle="collapse" data-targer="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					
+					<div class="custom-brand">
+						<a href="#" class="navbar-brand text-uppercase">Hasan</a>
+					</div>
+				</div> <!--End Navbar Header-->
+				
+				<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li class="dropdown">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#">Contact Us <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">HOme</a></li>
+								<li><a href="#">HO</a></li>
+								<li><a href="#">HOM</a></li>
+								<li><a href="#">HoMe</a></li>
+								<li><a href="#">HomE</a></li>
+							</ul>
+					</li>
+					<li><a href="#">FAQ</a></a></li>
+					
+				</ul>
+				
+				<form class="navbar-form navbar-right">
+					<div class="form-group">
+						<input type="search" id="Search" class="form-control" placeholder="search"></input>
+					</div>
+					<button type="button" class="btn btn-info">Download Now</button>
+				</form>
+
+				</div>
+			</div>
+		
+		</nav> <!--End of Navigation Bar-->
+		<script src="jquery-1.4.2.min.js"></script>
+		<script src="bootstrap.min.js"></script>
+	</body>
+</html>

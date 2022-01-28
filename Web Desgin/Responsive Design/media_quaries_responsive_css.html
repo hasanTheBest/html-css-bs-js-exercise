@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Responsive Media Quarries</title>
+		<meta name="viewport" content="width=device-width, intial-scal=1.0">
+	<style type="text/css">
+		div.navigation_wraper{
+			width: 100%;
+			height: auto;
+		}
+		div.navigation_wraper nav{
+			display: block;
+		}
+		nav ul{
+			margin: 0px;
+			padding: 0px;
+			list-style-type: none;
+		}
+		nav ul li{
+			width: 150px;
+			background-color: #BABABA;
+			text-shadow: 0px 2px 2px;
+			position: relative;
+			line-height: 25px;
+			float: left;
+			text-align: center;
+			font-family: lusida, arial;
+			font-size: 15px;
+			margin: 2px;
+			
+			
+		}
+		nav ul li a{
+			text-decoration: none;
+			display: block;
+			color: #E4E4E4;
+			padding: 1px 0px;
+
+		}
+		nav ul li a:hover{
+			background-color: #4C9ED9;
+			color: black;
+		}
+		nav ul ul{
+			position: absolute;
+			display: none;
+			width: 200px;
+		}
+		nav ul li:hover > ul{
+			display: block;
+		}
+		nav ul li:hover ul li a:hover{
+			color: black;
+			background-color: #E4E4E4;
+		}
+		
+	</style>
+	</head>
+	
+	<body>
+		<div class="navigation_wraper">
+			<nav>
+				<ul>
+					<li><a href="#">Products</a></li>
+					<li><a href="#">Services</a>
+						<ul>
+							<li><a href="#">Hardware</a></li>
+							<li><a href="#">Software</a></li>
+							<li><a href="#">Programing</a></li>
+							<li><a href="#">Weg Development</a></li>
+							<li><a href="#">Web Programing</a></li>
+							<li><a href="#">Internet</a></li>
+							<li><a href="#">Domain & Hosting</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Other Products</a></li>
+					<li><a href="#">Products</a></li>
+					<li><a href="#">Accesories</a></li>
+					<li><a href="#">Mscellaneous</a></li>
+				</ul>
+			</nav>
+		</div>
+	</body>
+</html>

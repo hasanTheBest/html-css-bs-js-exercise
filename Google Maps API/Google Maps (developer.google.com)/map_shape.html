@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8">
+	<title>Adding a Shape withing Google Map API</title>
+
+	<style type="text/css">
+		
+	html, body{
+		height: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	#mapConatainer{
+		width: 100%;
+		height: 400px;
+		border: 3px solid aqua;
+		box-sizing: border-box;
+		border-radius: 10px;
+	}
+
+	</style>
+
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+
+</head>
+<body>
+
+<div id="mapConatainer"></div>
+
+
+<script type="text/javascript">
+
+// comples polyline example
+/*
+	var poly;
+	var map;
+
+	function drawMap(){
+		map = new google.maps.Map(document.getElementById("mapConatainer"), {
+			zoom : 10,
+			center: {lat: 24.410243, lng: 89.007618 }
+		});
+
+		poly = new google.maps.Polyline({
+			strokeColor: "#a3a3a3",
+			strokeWeight: 3,
+			strokeOpacity: 1
+		});
+		poly.setMap(map);
+
+		// Add a listener for the click event
+		map.addListener("click", addLatLng);
+	} 
+
+	// Handles click events on a map
+	function addLatLng(event){
+		var path = poly.getPath();
+
+		// Enter lat and lng into path array
+		path.push(event.latLng);
+
+		// Add new marker at the new plotted point
+		var marker = new google.maps.Marker({
+			position: event.latLng,
+			title: "#" + path.getLength(),
+			map: map
+		});
+	}*/
+
+// Simple polygon 
+/*
+ function drawMap(){
+	var map = new google.maps.Map(document.getElementById("mapConatainer"), {
+		zoom: 5,
+		center: {lat: 25.886, lng: -70.268},
+		mapTypeId: "terrain" 
+		//google.maps.MapTypeId.TERRAIN
+	});
+
+	// Define the LatLng coordinates for the polygon's
+	var triangleCoords = [
+		{lat: 25.774, lng: -80.190},
+		{lat: 18.466, lng: -66.118},
+		{lat: 32.321, lng: -64.757},
+		// {lat: 25.774, lng: -80.190}
+	];
+
+	// construct the polygon.
+	var bermudaTriangle = new google.maps.Polygon({
+		paths: triangleCoords,
+		strokeColor: "#FF0000",
+		strokeWeight: 2,
+		strokeOpacity: 0.8,
+		fillColor: "#FF0000",
+		fillOpacity: 0.35,
+		map: map
+	});
+	//bermudaTriangle.setMap(map);
+}
+*/
+
+// red simple rectangle on a map.
+/*
+ function drawMap(){
+	var map = new google.maps.Map(document.getElementById("mapConatainer"), {
+		zoom: 17,
+		center: {lat: 24.368713, lng: 88.640291},
+		mapTypeId: "roadmap"
+		// google.maps.MapTypeId.ROADMAP
+	});
+
+	var rectangle = new google.maps.Rectangle({
+		strokeColor: "#FF0000",
+		strokeOpacity: 0.8,
+		strokeWeight: 2,
+		fillColor: "#FF0000",
+		fillOpacity: 0.35,
+		map: map,
+		editable: true,
+		draggable: true,
+		bounds: {
+			north: 24.368713,
+			south: 24.371149,
+			east: 88.640291,
+			west: 88.638480
+
+			// new google.maps.boundsLatLng() for north-east
+			// new google.maps.boundsLatLng() for south-west
+		} 
+	});
+}*/
+
+// simple circle on map
+/*
+function drawMap(){
+	var map = new google.maps.Map(document.getElementById("mapConatainer"), {
+		zoom: 18,
+		center: {lat: 24.367693, lng: 88.637631},
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	});
+
+	var Britto = new google.maps.Circle({
+		center: {lat: 24.367755, lng: 88.637634},
+		radius: 40,
+		strokeWeight: 3,
+		strokeOpacity: 0.8,
+		strokeColor: "#FFF000",
+		fillOpacity: 0.3,
+		fillColor: "#FFF000",
+		
+		draggable: false,
+		map: map
+		// Britto.setMap(map)
+
+	})
+}*/
+
+// Simple intermediate circle example
+
+// Define a object conataining circle's center and radius
+
+var cityMap = {
+	chicago: {
+		center: {lat: 41.878, lng: -87.629},
+		population: 2714856
+	},
+	newWork: {
+		center: {lat: 40.714, lng: -74.005},
+		population: 8405819
+	},
+	losangeles: {
+		center: {lat: 34.052, lng: -118.243},
+		population: 3857799
+	},
+	vancouver: {
+		center: {lat: 49.25, lng: -123.1},
+		population: 603502
+	},
+};
+
+function drawMap(){
+	var map = new google.maps.Map(document.getElementById("mapConatainer"), {
+		zoom: 4,
+		center: {lat: 37.090, lng: -95.712},
+		mapTypeId: "terrain"
+	});
+
+	// Construct the circle for each value in citymap.
+	for(var city in cityMap){
+		// Add the circle foir this city to the map.
+		var cityCircle = new google.maps.Circle({
+			strokeOpacity: "#ffff00",
+			strokeOpacity: 0.8,
+			strokeWeight: 2,
+			fillColor: "#ffff00",
+			fillOpacity: .35,
+			map: map,
+			center: cityMap[city].center,
+			radius: Math.sqrt(cityMap[city].population) * 100
+		});
+	};
+}
+
+google.maps.event.addDomListener(window, 'load', drawMap);
+
+</script>
+
+</body>
+</html>

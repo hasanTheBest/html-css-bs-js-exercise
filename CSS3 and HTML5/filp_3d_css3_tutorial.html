@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+	
+		<style type="text/css">
+			.flip3D{
+				width: 240px;
+				height: 200px;
+				margin: 7px;
+				display: inline-block;
+			}
+			
+			.flip3D > .front{
+				position: absolute;
+				transform: perspective(600px) rotateY(0deg);
+				background: #F36D5A; width: 240px; height: 200px; border-radius: 7px;
+				-webkit-backface-visibility: hidden;
+				-moz-backface-visibility: hidden;
+				backface-visibility: hidden;
+				-webkit-transition: transform .5s linear 0s;
+				-moz-transition: transform .5s linear 0s;
+				transition: transform .5s linear 0s;
+			}
+			
+			.flip3D > .back{
+				position: absolute;
+				-webkit-transform: perspective(600px) rotateY(180deg);
+				-moz-transform: perspective(600px) rotateY(180deg);
+				transform: perspective(600px) rotateY(180deg);
+				background: #FF0; width: 240px; height: 200px; border-radius: 7px;
+				-webkit-backface-visibility: hidden;
+				-moz-backface-visibility: hidden;
+				backface-visibility: hidden;
+				-webkit-transition: transform .5s linear 0s;
+				-moz-transition: transform .5s linear 0s;
+				transition: transform .5s linear 0s;
+			}
+			.flip3D:hover > .front{
+				-webkit-transform: perspective(600px) rotateY(-180deg);
+				-moz-transform: perspective(600px) rotateY(-180deg);
+				transform: perspective(600px) rotateY(-180deg);
+			}
+			.flip3D:hover > .back{
+				-webkit-transform: perspective(600px) rotateY(0deg);
+				-mox-transform: perspective(600px) rotateY(0deg);
+				transform: perspective(600px) rotateY(0deg);
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="flip3D">
+			<div class="back"> Back - 1</div>
+			<div class="front"> Front - 1</div>
+		</div>
+		<div class="flip3D">
+			<div class="back"> Back - 2</div>
+			<div class="front"> Front - 2</div>
+		</div>
+		<div class="flip3D">
+			<div class="back"> Back - 3</div>
+			<div class="front"> Front - 3</div>
+		</div>
+	</body>
+</html>

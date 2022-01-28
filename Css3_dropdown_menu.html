@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>CSS3 Menu By Devtips</title>
+		
+		<style type="text/css">
+			nav{padding: 50px; text-align: center;}
+			nav > ul{list-style: none; padding: 0; margin: 0; display: inline-block; background: #ddd; border-radius: 5px;}
+			ul > li {float: left; width: 150px; height: 65px; line-height: 65px; position: relative; text-transform: uppercase; font-size: 14px; color rgba(0,0,0,0.7); cursor: pointer;}
+			li:hover{background: #d5d5d5; border-radius: 5px;}
+			ul.drop1{position: absolute; top: 100%; left: 0%; width: 100%; padding: 0;}
+			ul.drop1 li{background: #666; color: rgba(255,255,255,0.7)}
+			ul.drop1 li:hover{background: #606060;}
+			ul.drop1 li:last-child{border-radius: 0px 0px 5px 5px;}
+			ul.drop1 li{display: none;}
+			li:hover > ul.drop1 li{display: block;}
+			li:hover > ul.drop1.menu1{perspective: 1000px;}
+			li:hover > ul.drop1.menu1 li:nth-child(1){
+				opacity: 0;
+				animation-name: opec;
+				animation-duration: 300ms;
+				animation-delay: 0ms;
+				animation-timing-function: ease-in-out;
+				animation-fill-mode: forwards;
+			}
+			li:hover > ul.drop1.menu1 li:nth-child(2){
+				opacity: 0;
+				animation-name: opec;
+				animation-duration: 300ms;
+				animation-delay: 150ms;
+				animation-timing-function: ease-in-out;
+				animation-fill-mode: forwards;
+			}
+			li:hover > ul.drop1.menu1 li:nth-child(3){
+				opacity: 0;
+				animation-name: opec;
+				animation-duration: 300ms;
+				animation-delay: 300ms;
+				animation-timing-function: ease-in-out;
+				animation-fill-mode: forwards;
+			}
+			li:hover > ul.drop1.menu1 li:nth-child(4){
+				opacity: 0;
+				animation-name: opec;
+				animation-duration: 300ms;
+				animation-delay: 450ms;
+				animation-timing-function: ease-in-out;
+				animation-fill-mode: forwards;
+			}
+			li:hover > ul.drop1.menu1 li:nth-child(5){
+				opacity: 0;
+				animation-name: opec;
+				animation-duration: 300ms;
+				animation-delay: 600ms;
+				animation-timing-function: ease-in-out;
+				animation-fill-mode: forwards;
+			}
+			li:hover > ul.drop1.menu1 li:nth-child(6){
+				opacity: 0;
+				animation-name: opec;
+				animation-duration: 300ms;
+				animation-delay: 750ms;
+				animation-timing-function: ease-in-out;
+				animation-fill-mode: forwards;
+			}
+			@keyframes opec{
+				0%{
+					opacity: 0;
+					transform: rotateY(-90deg) translateY(30px)
+				}
+				100%{
+					opacity: 1;
+					transform: rotateY(0deg) translateY(0px)
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li>Style 1
+					<ul class="drop1 menu1">
+						<li>uno</li>
+						<li>dos</li>
+						<li>tres</li>
+						<li>castro</li>
+						<li>cinco</li>
+						<li>seis</li>
+					</ul>
+				</li>
+				
+				<li>Style 2
+					<ul class="drop1 menu2">
+						<li>uno</li>
+						<li>dos</li>
+						<li>tres</li>
+						<li>castro</li>
+						<li>cinco</li>
+						<li>seis</li>
+					</ul>
+				</li>
+				
+				<li>Style 3
+					<ul class="drop1 menu3">
+						<li>uno</li>
+						<li>dos</li>
+						<li>tres</li>
+						<li>castro</li>
+						<li>cinco</li>
+						<li>seis</li>
+					</ul>
+				</li>
+				
+				<li>Style 4
+					<ul class="drop1 menu4">
+						<li>uno</li>
+						<li>dos</li>
+						<li>tres</li>
+						<li>castro</li>
+						<li>cinco</li>
+						<li>seis</li>
+					</ul>
+				</li>
+				
+				<li>Style 5</li>
+			</ul>
+		</nav>
+	</body>
+</html>

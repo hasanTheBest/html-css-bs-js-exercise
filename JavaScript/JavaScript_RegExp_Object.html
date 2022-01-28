@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>JavaScript- RegExp Object</title>
+	</head>
+	<body>
+	
+		<script type="text/javascript">
+		
+			//Method of RegExp--- test() method
+			var patt1 = new RegExp("e");
+			document.write(patt1.test("The best thing in life is free") + "</br>");
+			
+			//Method of RegExp --- exec() method
+			var patt2 = new RegExp("e");
+			document.write(patt2.exec("The best thing in life is free") + "</br>");
+			
+			//exec() method with global perameter
+			var patt3 = new RegExp("e", "g");
+			do{
+				result = patt3.exec("The best thing in life is free");
+				document.write(result + "</br");
+			}
+			while(result != null)
+			//compile() method 
+			var patt4 = new RegExp("e");
+			document.write(patt4.test("The best thing in life is free"));
+			
+			patt4.compile("d");
+			
+			document.write(patt4.test("The best thing in life is free"));
+		</script>
+	</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Web Clock Display</title>
+		<meta charset="UTF-8">
+	</head>
+	<body onLoad="Web_Clock()">
+		
+		<div id="txt"></div>
+		<div id="Clock"></div>
+		
+		<script type="text/javascript">
+			function startTime(){
+				var today = new Date();
+				var h = today.getHours();
+				var m = today.getMinutes();
+				var s = today.getSeconds();
+				// add zero infront of numbers < 10
+				m = checkTime(m);
+				s = checkTime(s);
+				document.getElementById("txt").innerHTML = "This is a Clock = " + h + " : " + m + " : " + s;
+				t = setTimeout('startTime()',500);
+			}
+			function checkTime(i){
+				if(i < 10){
+					i = "0" + i;
+				}
+				return i;
+			}
+			// display of todays name
+			var d = new Date();
+			var weekday = new Array(7);
+			weekday[0] = "Sunday";
+			weekday[1] = "Monday";
+			weekday[2] = "Tuesday";
+			weekday[3] = "Wednesday";
+			weekday[4] = "Thrusday";
+			weekday[5] = "Friday";
+			weekday[6] = "Sutarday";
+			document.write("Today is : " + weekday[d.getDay()] + "</br>");
+			
+			// toUTCString() method using code here......
+			var dt = new Date();
+			document.write("Orginal form : ");
+			document.write(dt + "</br>");
+			document.write("To string (Universal time): ");
+			document.write(dt.toUTCString() + "</br>");
+			//conparision between two date...... code here
+			var myDate = new Date();
+			myDate.setFullYear(2016, 5, 28);
+			var tonight = new Date();
+			if(myDate > tonight){
+				alert("Today is before 25th may 2016");
+			}
+			else{
+				alert("Today is after 25th may 2016");
+			}
+			// display of Web Clock two
+			function Web_Clock(){
+			
+				var time = new Date();
+				var h = time.getHours();
+				var m = time.getMinutes();
+				var s = time.getSeconds();
+				m = checkTime(m);
+				s = checkTime(s);
+				document.getElementById("Clock").innerHTML = h + " Hours : " + m + " Minutes : " + s + " Seconds.";
+				t = setTimeout("Web_Clock()", 500);
+				function Web_Clock(i){
+		
+					if(i < 10){
+						i = "0" + i;
+					}
+					return i;
+				}
+			}
+		</script>
+	</body>
+</html>

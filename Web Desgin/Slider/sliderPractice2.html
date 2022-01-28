@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Slider Practice Two</title>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			div#container{
+				width: 620px;
+				height: 450px;
+				position: relative;
+				margin: 20px auto;
+			}
+			
+			div#container img{
+				width: 620px;
+				height: 450px;
+			}
+			div#left{
+				position: absolute;
+				width: 40px;
+				height: 450px;
+				top: 0;
+				left: 0;
+			}
+			div#right{
+				position: absolute;
+				width: 40px;
+				height: 450px;
+				top: 0;
+				right: 0;
+			}
+			div#left img{
+				position: absolute;
+				width: 30px;
+				height: 30px;
+				top: 40%;
+				left: 0;
+			}
+			div#right img{
+				position: absolute;
+				width: 30px;
+				height: 30px;
+				top: 40%;
+				right: 0;
+			}
+		</style>
+		<script type="text/javascript">
+			var imagecount = 1;
+			var total = 4;
+			function slider(x){
+				var image = document.getElementById("img");
+				imagecount = imagecount + x;
+				image.src = "pics/aftab"+ imagecount +".jpg";
+				if(imagecount > total){
+					imagecount = 1;
+				}
+				if(imagecount < 1){
+					imagecount = total;
+				}
+			}
+			window.setInterval(function sliderA(){
+				var image = document.getElementById("img");
+				imagecount = imagecount + 1;
+				image.src = "pics/aftab"+ imagecount +".jpg";
+				if(imagecount > total){
+					imagecount = 1;
+				}
+				if(imagecount < 1){
+					imagecount = total;
+				}
+			}, 5000);
+		</script>
+	</head>
+	<body onload="sliderA()">
+		<div id="container">
+			<div id="imgslider">
+				<img src="pics/aftab1.jpg" alt="Slider Image Aftab" id="img"/>
+			</div>
+			<div id="left"><img src="pics/sprite_prev.png" alt="Previous" onClick="slider(-1)"/></div>
+			<div id="right"><img src="pics/sprite_next.png" alt="Next" onClick="slider(1)"/></div>
+		</div>
+		<div>
+			<h2>Necessary JavaScript Code For Making Image Slider</h2>
+			<code>
+				<pre>
+					script type="text/javascript">
+						var imagecount = 1;
+						var total = 4;
+						function slider(x){
+							var image = document.getElementById("img");
+							imagecount = imagecount + x;
+							image.src = "pics/aftab"+ imagecount +".jpg";
+							if(imagecount > total){
+								imagecount = 1;
+							}
+							if(imagecount < 1){
+								imagecount = total;
+							}
+						}
+						window.setInterval(function sliderA(){
+							var image = document.getElementById("img");
+							imagecount = imagecount + 1;
+							image.src = "pics/aftab"+ imagecount +".jpg";
+							if(imagecount > total){
+								imagecount = 1;
+							}
+							if(imagecount < 1){
+								imagecount = total;
+							}
+						}, 5000);
+					
+					script>
+				</pre>
+			</code>
+		</div>
+	</body>
+</html>

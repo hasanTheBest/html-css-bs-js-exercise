@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Google Maps Learining</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<script src="http://maps.googleapis.com/maps/api/js"></script>
+		
+	</head>
+	<body>
+		<div id="googleMap" style="width:620px; height:520px;"></div>
+		
+		<!--<script>
+			function initialize() {
+				var mapProp = {
+					center:new google.maps.LatLng(51.508742,-0.120850),
+					zoom:10,
+					mapTypeId:google.maps.MapTypeId.ROADMAP
+				};
+				var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+			}
+			google.maps.event.addDomListener(window,'load', initialize);
+		</script>-->
+		
+		<!--<script>
+			function initialize() {
+			  var mapProp = {
+				center:new google.maps.LatLng(51.508742,-0.120850),
+				zoom:5,
+				mapTypeId:google.maps.MapTypeId.ROADMAP
+			  };
+			  var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>-->
+		
+		<script>
+			function initialize() {
+				var mapProp = {
+					center:new google.maps.LatLng(24.12548,30.25418),
+					zoom:2,
+					mapTypeId:google.maps.MapTypeId.ROADMAP
+				};
+				var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+				
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Dev Tips Animation Episode 1</title>
+		
+		<style type="text/css">
+			.trigger{
+				width: 300px;
+				height: 200px;
+				background: #eeeee;
+				border: 6px solid grey;
+			}
+			.animation{
+				width: 300px;
+				height: 200px;
+				background: orangered;
+				transform: translate(200pz, 150px) rotate(20deg);
+				transition: transform 200ms linear;
+				border-radius: 50%; 
+				
+				
+			}
+			.trigger:hover .animation{
+				transform: translate(200px, 150px) rotate(20deg);
+			}
+			.box{
+				width: 200px;
+				height: 200px;
+				display: block;
+				position: relative;
+				background: orangered;
+				margin: 10px;
+				perspective: 800px;
+				-moz-animation: animate 2s ease-in-out 0s infinite;
+				animation: animate 5s linear 0s infinite alternate;
+			}
+			@keyframes animate{
+				0%{
+					width: 200px;
+					height: 200px;
+					background: orangered;
+				}
+				50%{
+					width: 100px;
+					height: 100px;
+					background: red;
+					border-radius: 50%;
+					transform: rotateX(90deg);
+				}
+				100%{
+					width: 400px;
+					height: 40px;
+					background: hotpink;
+					border-radius: 20%;
+					transform: rotateX(180deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="trigger">
+			<div class="animation"></div>
+		</div>
+		<div class="box"></div>
+	</body>
+</html>

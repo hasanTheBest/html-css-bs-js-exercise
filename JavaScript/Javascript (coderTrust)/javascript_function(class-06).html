@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset = "UTF-8">
+		<title>Javascript Function</title>
+	</head>
+	
+	<body>
+		<h1 id="header"></h1>
+		<h1 id="header2"></h1>
+		
+		<button onClick="eventCall()">What's up Man</button>
+		<h2 id="answer"></h2>
+		
+		<script type="text/javascript">
+			var outcome = document.getElementById("header");
+			function show_data(siam)
+			{
+				return siam + ". I adore brother.";
+			}
+			outcome.innerHTML = show_data("Very Smart Pola");
+			var addition = document.getElementById("header2");
+			function add(a, b)
+			{
+				var c = a + b;
+				return "The sum is : " + c;
+			}
+			addition.innerHTML = add(40, 60);
+			
+			// Javascript Event 
+			
+			var event = document.getElementById("answer");
+			function eventCall()
+			{
+				event.innerHTML = "Cool Man. Very Cooooooool.";
+			}
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initail-scale=1">
+		<title>HTML5 and CSS3 Menu</title>
+		
+		<style type="text/css">
+			body{
+				margin: 0px;
+				padding: 0px;
+				box-sizing: border-box;
+			}
+			nav{
+				width: 100%;
+				height: auto;
+				border-bottom: 2px dotted yellow;
+				background-color: #D5D5D7;
+				box-sizing: border-box;
+				padding: 10px;
+			}
+			
+			ul{
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+			ul li{
+				padding: 3px;
+				display: inline-block;
+			}
+			ul li a {
+				text-decoration: none;
+				display: block;
+				padding: 8px 16px;
+				font-size: 20px;
+				border: 2px solid #2CA86C;
+				background-color: #0282BD;
+				color: white;
+				border-radius: 30%;
+				transition: all .2s linear 0s;
+				}
+			a:hover{
+				background-color: white;
+				color: #0282BD;
+			}
+			.navbar {
+				background-color: #FFFFFF;
+				padding: 8px 0;
+				
+				
+			}
+			.navbar ul{
+				background: linear-gradient(#F0F0F0,#D4DBEE, #F0F0F0);
+				min-height: 35px;
+				margin: 0 auto;
+				
+			}
+			.navbar > ul li a{
+				font-size: 14px;
+				color: rgba(0,0,0,0.8);
+				background: inherit;
+				border: none;
+				font-family: arial;
+				line-height: 18px;
+				padding: 4px 8px;
+				border-radius: 3px;
+				border: 1px solid transparent;
+			}
+			.navbar  a:hover{
+				border: 1px solid rgba(0,0,0,0.3);
+				border-radius: 3px;
+			}
+			@media screen and (max-width: 520px){
+				
+				li{
+					width: 47%;
+					display: inline;
+				}
+				.navbar li{
+					width: 31%;
+				}
+				li a{
+					text-align: center;
+				}
+			}
+			
+			.navbar2 > ul{
+				width: 100%;
+				min-height: 48px;
+				background: linear-gradient(#5D5D5D, #0B0B0B);
+				
+			}
+			.navbar2 > ul li{
+				position: relative;
+				float: left;
+				
+			}
+			.navbar2 > ul li a{
+				width: 110px;
+				border: 2px solid rgba(0,0,0,0.3);
+				border-radius: 3px;
+				background-color: transparent;
+				color: lightgrey;
+				line-height: 20px;
+				font-family: arial;
+				font-size: 16px;
+				
+			}
+			.navbar2 > ul li a:hover{
+				background-color: rgba(255,255,255,0.2);
+				border: 2px solid rgba(0,255,0,0.4);
+			}
+			
+			.navbar2 > ul li a#logo{
+				border: none;
+				border-radius: 3px;
+				background-color: transparent;
+				font-size: 22px;
+				line-height: 40px;
+				padding: 0px 8px;
+				
+			}
+			
+			ul#hide{
+				visibility: hidden;
+				position: absolute;
+				top: 93%;
+				width: 132px;
+				border: 5px solid rgba(0,255,0,0.4);
+				background-color: grey;
+				color: white;
+				text-align: center;
+				
+			}
+			
+			
+			.navbar2 > ul li:hover ul#hide{
+				visibility: visible;
+			}
+			
+			
+			
+			.navbar3 {
+				background-color: rgba(0,0,0,0.1);
+				padding: 8px 0;
+				
+				
+			}
+			.navbar3 ul{
+				background: linear-gradient(rgba(100%,80%,0%,0.6), rgba(100%,0%,0%,0.6));
+				min-height: 35px;
+				margin: 0 auto;
+				
+			}
+			.navbar3 > ul li a{
+				font-size: 14px;
+				color: rgba(0,0,0,0.8);
+				background: inherit;
+				border: none;
+				font-family: arial;
+				line-height: 18px;
+				padding: 4px 8px;
+				border-radius: 3px;
+				border: 1px solid transparent;
+			}
+			.navbar3 a:hover{
+				border: 1px solid rgba(0,0,0,0.5);
+				border-radius: 3px;
+				background-color: rgba(255,255,255,0.3);
+
+			}
+					
+		</style>
+	</head>
+	
+	<body>
+		<nav>
+			<ul>
+				
+				<li><a href="#">Yousuf</a></li>
+				<li><a href="#">Yeahia</a></li>
+				<li><a href="#">Elias</a></li>
+				<li><a href="#">Sabit</a></li>
+				<li><a href="#">Siam</a></li>
+				<li><a href="#">Zia</a></li>
+			</ul>
+		</nav>
+		
+		<nav>
+			<ul>
+				
+				<li><a href="#">Yousuf, Imtiz Ahmed Siam</a></li>
+				<li><a href="#">Yeahia, South Koria</a></li>
+				
+			</ul>
+		</nav>
+		
+		<nav class="navbar">
+			<ul>
+				<li><a href="#">File</a></li>
+				<li><a href="#">Edit</a></li>
+				<li><a href="#">Search</a></li>
+				<li><a href="#">Language</a></li>
+				<li><a href="#">Encoding</a></li>
+				<li><a href="#">Setting</a></li>
+				<li><a href="#">Macro</a></li>
+				<li><a href="#">Run</a></li>
+				<li><a href="#">Plugins</a></li>
+				<li><a href="#">Windows</a></li>
+				<li><a href="#">?</a></li>
+			</ul>
+		</nav>
+		
+		<nav class="navbar2">
+		
+			<ul>
+				<li><a href="#" id="logo">LoGo</a></li>
+				<li><a href="#">Description</a></li>
+				<li><a href="#">Descrip</a></li>
+				<li><a href="#">Desc</a></li>
+				<li><a href="#">Cription</a>
+					<ul id="hide">
+						<li><div id="drpDown">
+							<h1>Md. Yeahia Ali</h1>
+							<p>He lives in South Koria. He is my 
+							maternal uncle. He is very gentle man.
+							His attitude is also awesome.
+							I love him very much.</p>
+						</div></li>
+					</ul>
+				</li>
+				
+			</ul>
+		</nav>
+		
+		<nav class="navbar3">
+			<ul>
+				<li><a href="#">File</a></li>
+				<li><a href="#">Edit</a></li>
+				<li><a href="#">Search</a></li>
+				<li><a href="#">Language</a></li>
+				<li><a href="#">Encoding</a></li>
+				<li><a href="#">Setting</a></li>
+				<li><a href="#">Macro</a></li>
+				<li><a href="#">Run</a></li>
+				<li><a href="#">Plugins</a></li>
+				<li><a href="#">Windows</a></li>
+				<li><a href="#">?</a></li>
+			</ul>
+		</nav>
+	</body>
+</html>

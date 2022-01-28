@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>For Loop Example</title>
+		<style>
+			#form{background-color: silver;
+				  padding: 10px;
+				  margin: 0 auto;
+				  width: 600px;
+				  
+			}
+			input{border: 1px solid black;
+				  width: 200px;
+				  height: 20px;
+				  border-radius: 5px;
+				  margin: 5px;
+				}
+				th{
+					text-align: center;
+					font-size: 150%;
+					color: blue;
+				}
+		</style>
+	</head>
+	<body>
+		<form id="form">
+	
+			<table>
+				<th>HTML5 Form</th><hr>
+				<tr>
+					<td>Name</td>
+					<td><input name="username" type="text" placeholder="Your name"></input></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input name="username" type="email" placeholder="Your Email"></input></td>
+				</tr>
+				<tr>
+					<td>Rate Our Site</td>
+					<td><input name="userrating" type="number" placeholder="Your Rate"></input></td>
+				</tr>
+				<tr>
+					<td>Your Birthday</td>
+					<td><input name="Birthday" type="date" placeholder="Your Birthday"></input></td>
+				</tr>
+				<tr>
+					<td>Name</td>
+					<td><input name="username" type="text" placeholder="Your name"></input></td>
+				</tr>
+				<tr>
+					<td>Name</td>
+					<td><input name="username" type="text" placeholder="Your name"></input></td>
+				</tr>
+				<tr>
+					<td>Name</td>
+					<td><input name="username" type="text" placeholder="Your name"></input></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input name="submit" type="button" value="Submit" placeholder="Your name"></input></td>
+				</tr>
+			<table>
+		</form>
+		
+		<hr>
+		<script type="text/javascript">
+		
+			for (i=0; i<8; i++){
+				document.write("I am a awsome web developer "+i+" </br>");
+			
+			}
+			
+			// while loop example
+			var a=1;
+			while (a<=5){
+				document.write("this is while loop example "+a+" </br>");
+				a++;
+				
+			}
+			// do while loop example here
+			var b=3;
+			do{
+				document.write("This is DO WHILE example "+b+" </br>");
+				b++;
+			}while(b<=8);
+			//JavaScript - Objects, Properties and Methods
+			var x = "My name is Mahmudul Hasan and 20 years only";
+			var longivity = x.length; // Objectname.Propertyneme
+			document.write(longivity );
+			document.write("</br>");
+		
+			// JavaScript - Methods
+			var y = "bangladesh is my country which give me pleasure";
+			var capitals = y.toUpperCase();
+			document.write(capitals);
+			document.write("</br>");
+		</script>
+	</body>
+</html>

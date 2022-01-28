@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Styling HTML5 Form Validation Menu</title>
+		
+		<style type="text/css">
+			body{
+				background-color: rgba(169,190,192,0.53);
+				font-size: 16px;
+			}
+			section{
+				width: 90%;
+				margin: 1% auto;
+			}
+			form{
+				width: 50%;
+				margin: 2% auto;
+			}
+			fieldset{
+				background-color: rgba(247,236,236,1);
+				margin-bottom: 24px;
+				padding; 12px 20px;
+				border-radius: 8px;
+				border: 1px solid silver;
+				box-shadow: 0px 0px 48px rgba(148, 150, 1547, 0.27);;
+			}
+			legend{
+				font-size: 24px;
+				font-family: lobster;
+				text-transform: capitalize;
+				background-color: rgba(247, 236, 236, 1);
+				border-radius: 8px;
+				marging-bottom: 8px;
+				border: 1px solid transparent;
+				padding: 5px 12px;
+				color: rgba(0,0,0,0.47);
+				text-shadow: 1px -2px 2px rgba(242,242, 243,0.65);
+			}
+			label{
+				display: block;
+				margin-bottom: 24px;
+				
+			}
+			label > span{
+				display: inline-block;
+				margin-bottom: 5px;
+				color: rgba(63,63,56,1);
+			}
+			input{
+				display: block;
+				border: 1px solid rgba(0,0,0,0.3);
+				box-shadow -1px -2px 3px rgba(0,0,0,0.2);
+				padding: 8px;
+				padding-right: 45px;
+				text-align: center;
+				color: rgba(101,100,90,1);
+			}
+			input:required{
+				background: url("Images/btn.png") no-repeat 96% center white;
+				outline: 2px solid transparent;
+			}
+			input:valid{
+				outline: 2px solid rgba(76, 168, 76, 0.89);
+			}
+			input:invalid:focus{
+				outline: 2px solid rgba(200, 76, 76, 0.89);
+			}
+			input[type="submit"]:valid{
+				outline-color: transparent;
+				box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+				border-radius: 3px;
+				bakground-image: none;
+				padding-right: 8px;
+			}
+			input[type="submit"]:valid:hover,
+			input[type="submit"]:valid:focus{
+				cursor: pointer;
+				box-shadow: none;
+			}
+		</style>
+		
+		<body>
+			<section>
+				<form>
+					<fieldset>
+						<legend>Simple Form</legend>
+							<label for="userName">
+								<span>Choose A User Name</span>
+								<input required id="userName" type="text" placeholder="Your Name"></input>
+							</label>
+							<label for="emailAddress">
+								<span>Email Address</span>
+								<input required id="emailAddress" type="email" placeholder="Email Here"></input>
+							</label>
+							<label for="Password">
+								<span>Choose A User Password</span>
+								<input required id="Password" type="Password" pattern="\S{6}" placeholder="Your Name"></input>
+							</label>
+							<input type="submit" value="Submit"></input>
+					</fieldset>
+					
+				</form>
+			</section>
+		</body>
+	</head>
+</html>

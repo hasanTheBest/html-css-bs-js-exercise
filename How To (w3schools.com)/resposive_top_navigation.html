@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Resposive Top Navigation</title>
+
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		.topNav{
+			overflow: hidden;
+			background-color: #333;
+		}
+		.topNav a{
+			text-decoration: none;
+			display: block;
+			padding: 10px 22px;
+			font-size: 20px;
+			float: left;
+			color: #ddd;
+			text-align: center;
+		}
+		
+		.topNav a:hover{
+			background-color: #ddd;
+			color: black;
+		}
+		.topNav .icon{
+			display: none;
+		}
+
+		@media screen and (max-width: 600px){
+			.topNav a:not(:first-child){
+				display: none;
+			}
+			.topNav a.icon{
+				display: block;
+				float: right;
+			}
+		}
+
+		@media screen and (max-width: 600px){
+			.topNav.responsive{ position: relative; }
+			.topNav.responsive .icon{
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+
+			.topNav.responsive a{
+				text-align: left;
+				display: block;
+				float: none;
+			}
+		}
+	</style>
+
+</head>
+<body>
+
+<div class="topNav" id="myNav">
+	<a href="#">Home</a>
+	<a href="#">Work</a>
+	<a href="#">Client</a>
+	<a href="#">News</a>
+	<a href="#">Contact</a>
+	<a href="#">About</a>
+	<a href="javascript:void(0);" class="icon" onclick="myFunction()" style="font-size: 17px" >&#9776;</a>
+</div>
+
+
+
+
+<script type="text/javascript">
+		function myFunction(){
+			var navbar = document.getElementById("myNav");
+
+			if(navbar.className === "topNav"){
+				navbar.className += " responsive";
+			}else{
+				navbar.className = "topNav";
+			}
+		}
+		
+</script>
+
+</body>
+</html>

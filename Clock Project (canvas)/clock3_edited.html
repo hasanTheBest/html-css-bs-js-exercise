@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="discription" content="HTML5 canvas element based javascript clock project. A dynamic wonderful wall clock is drawn with the help of javascript and canvas element.">
+  <meta name="keywords" content="HTML5, canvas, web, javascript, html, css, css3,">
+  <meta name="author" content="Mahmudul Hasan">
+
+  <title>Javascript Illustration with HTML5 Canvas Element</title>
+
+	<style type="text/css">
+
+  body{
+    margin: 0;
+    padding: 0;
+    background-color: #E3012E;
+    font-size: 14px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+  }
+  div.navigation{
+    clear: both;
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    position: relative;
+     text-align: center;
+      box-shadow: 0px 4px 8px rgba(0,0,0, 0.3); 
+
+  }
+  nav{
+    width: 100%;
+    height: 300px;
+    background-color: rgba(0,0,0, 0.3);
+    overflow: hidden;
+    position: fixed;
+
+    
+
+
+  }
+  nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0; 
+    
+     
+  }
+  nav ul li{
+   
+  }
+  nav ul li a{
+    text-decoration: none;
+    color: orangered;
+    background-color: rgba(255,255,255, 0.8);
+    padding: 10px 22px;
+    font-size: 1.2em;
+   
+    float: left;
+    text-align: center;
+  }
+
+
+		 div#canvasHolder{
+			background-image: url('brick_texture586 - Copy (2).jpg');
+      background-repeat: repeat-y;
+			max-width: 100%;
+			height: auto;
+			text-align: center;
+      min-width: 220px;
+     /* margin-top: 41px;*/
+		}
+    div.dimention{
+      width: 100%;
+      height: auto;
+      background-color: #FFFFFF;
+      box-shadow: 0px 4px 8px rgba(0,0,0, 0.3); 
+      position: relative;
+    }
+    span.note{
+      border-radius: 4px;
+      padding: 5px 10px;
+      background-color: #FFCE44;
+      color: #a3a3a3;
+      line-height: 30px;
+
+    }
+    div.dimention button{
+      background-color: #FFFFFF;
+      color: #FF5252;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 2px;
+      margin: 8px 3px;
+      font-size: 0.8em;
+    }
+    div.dimention button:hover{
+      background-color: rgba(0,0,0, 0.1);
+      cursor: pointer;
+    }
+   
+	</style>
+
+</head>
+<body>
+
+  <!-- <div class="navigation">
+    <nav>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">News</a></li>
+        <li><a href="">Work</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </nav>
+  </div> -->
+  
+ <div id="canvasHolder">
+
+ <div class="dimention">
+
+      <span class="note">Hit the button to resize the clock</span><br>
+   
+      <button type="button"  value=100 onclick="setHeight(this.value)">100 X 100
+      <button type="button"  value=200 onclick="setHeight(this.value)">200 X 200
+      <button type="button"  value=300 onclick="setHeight(this.value)">300 X 300
+      <button type="button"  value=400 onclick="setHeight(this.value)">400 X 400
+      <button type="button"  value=500 onclick="setHeight(this.value)">500 X 500
+      <button type="button"  value=600 onclick="setHeight(this.value)">600 X 600
+      <button type="button"  value=700 onclick="setHeight(this.value)">700 X 700
+      <button type="button"  value=800 onclick="setHeight(this.value)">800 X 800
+      <button type="button"  value=900 onclick="setHeight(this.value)">900 X 900
+      <button type="button"  value=1000 onclick="setHeight(this.value)">1000 X 1000
+    
+  </div>
+
+	<canvas id="canvas" width="500" height="500"></canvas>
+</div>
+
+<div class="contact"><p>Any kind of balme, bliss or bless directly send to <a href="mailto:rainbowmahmud@gmail.com">
+  rainbowmahmud@gmail.com
+</a></p></div>
+
+
+
+<script>
+
+
+
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var radius;
+function setHeight(value){
+  canvas.height = value;
+ canvas.width = value;
+ radius = canvas.height / 2;
+ctx.translate(radius, radius);
+radius = radius * 0.90
+//drawClock();
+setInterval(drawClock, 1000);
+ 
+}
+
+
+
+
+radius = canvas.height / 2;
+ctx.translate(radius, radius);
+radius = radius * 0.90
+//drawClock();
+setInterval(drawClock, 1000);
+
+function drawClock() {
+  drawFace(ctx, radius);
+  drawNumbers(ctx, radius);
+  drawPointers(ctx, radius);
+  drawTime(ctx, radius);
+}
+
+function drawFace(ctx, radius) {
+  var grad;
+
+  ctx.beginPath();
+  ctx.arc(0, 0, radius, 0, 2*Math.PI);
+  ctx.fillStyle = "#D4D3E5";
+  ctx.fill();
+
+  grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.1);
+  grad.addColorStop(0, '#333');
+  grad.addColorStop(0.5, 'green');
+  grad.addColorStop(1, '#333');
+  ctx.strokeStyle = grad;
+  ctx.lineWidth = radius*0.1;
+  ctx.stroke();
+  
+  ctx.beginPath();
+  ctx.arc(0, 0, radius*0.06, 0, 2*Math.PI);
+  ctx.fillStyle = 'green';
+  ctx.fill();
+
+}
+
+function drawNumbers(ctx, radius) {
+  var ang;
+  var num;
+  ctx.font = radius*0.15 + "px arial";
+  ctx.textBaseline="middle";
+  ctx.textAlign="center";
+  for(num = 1; num < 13; num++){
+    ang = num * Math.PI / 6;
+    ctx.rotate(ang);
+    ctx.translate(0, -radius*0.70);
+    ctx.rotate(-ang);
+    ctx.fillStyle = "green";
+    ctx.fillText(num.toString(), 0, 0);
+    ctx.rotate(ang);
+    ctx.translate(0, radius*0.70);
+    ctx.rotate(-ang);
+  }
+}
+
+
+function drawPointers(ctx, radius) {
+  var ang;
+  var num;
+  
+  for(num = 1; num < 61; num++){
+    ang = num * Math.PI / 30;
+    ctx.rotate(ang);
+    ctx.translate(0, -radius*0.92);
+    ctx.fillStyle = "green";
+    ctx.fillRect(0,0,radius*0.01,radius*0.03);
+    ctx.translate(0, radius*0.92);
+    ctx.rotate(-ang);
+  }
+
+  for(num = 5; num < 61; num = num + 5){
+    ang = num * Math.PI / 30;
+    ctx.rotate(ang);
+    ctx.translate(0, -radius*0.92);
+    ctx.fillStyle = "green";
+    ctx.fillRect(0,0,radius*0.02,radius*0.06);
+    ctx.translate(0, radius*0.92);
+    ctx.rotate(-ang);
+  }
+}
+
+
+
+function drawTime(ctx, radius){
+				var now = new Date();
+				var hour = now.getHours();  
+				var minute = now.getMinutes();  
+				var second = now.getSeconds(); 
+
+				//hour
+				hour = hour%12;
+				hour = (hour*Math.PI/6)+(minute*Math.PI/(6*60))+(second*Math.PI/(360*60));
+				drawHand(ctx,hour,radius*0.5,radius*0.05);
+        drawHours(ctx,hour,radius*0.58);
+				
+				//minute
+				minute = (minute*Math.PI/30)+(second*Math.PI/(30*60));
+				
+        drawHand(ctx,minute,radius*0.74,radius*0.025);
+				drawMinutes(ctx,minute,radius*0.81);
+        
+				//second
+				second = (second*Math.PI/30);
+				
+				drawHand(ctx,second,radius*0.82,radius*0.015);
+        drawSeconds(ctx,second,radius*0.85);
+				
+				function drawHand(ctx,pos,length,width){
+				ctx.beginPath();
+				ctx.lineWidth = width;
+				ctx.lineCap = "round";
+				ctx.moveTo(0,0);
+				ctx.rotate(pos);
+				ctx.lineTo(0,-length);
+				ctx.strokeStyle="green";
+				ctx.stroke();
+				ctx.rotate(-pos);
+				}
+
+        function drawSeconds(ctx, pos, length){
+          ctx.rotate(pos);
+          ctx.translate(0, -length);
+          ctx.fillStyle = "#BB1E03";
+          ctx.font = radius*0.05 + "px Arial";
+          ctx.textAlign = "center";
+          ctx.fillText(now.getSeconds(), 0,0);
+          ctx.translate(0, length);
+          ctx.rotate(-pos)
+        }
+
+        function drawMinutes(ctx, pos, length){
+          ctx.rotate(pos);
+          ctx.translate(0, -length);
+          ctx.fillStyle = "orangered";
+          ctx.font = radius*0.08 + "px Arial";
+          ctx.textAlign = "center";
+          ctx.fillText(now.getMinutes(), 0,0);
+          ctx.translate(0, length);
+          ctx.rotate(-pos)
+        }
+
+        function drawHours(ctx, pos, length){
+          ctx.rotate(pos);
+          ctx.translate(0, -length);
+          ctx.fillStyle = "hotpink";
+          ctx.font = radius*0.12 + "px Arial";
+          ctx.textAlign = "center";
+          ctx.fillText(now.getHours()%12, 0,0);
+          ctx.translate(0, length);
+          ctx.rotate(-pos)
+        } 
+			}
+
+</script>
+
+</body>
+</html>
+

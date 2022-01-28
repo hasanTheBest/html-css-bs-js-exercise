@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>FullScreen Slider</title>
+</head>
+<body>
+  <div class="wrap">
+    <div id="arrow-left" class="arrow"></div>
+      <div id="slider">
+
+        <div class="slide slide1">
+          <div class="slide-content">
+            <span class="img-caption">Image One</span>
+          </div>
+        </div>
+
+        <div class="slide slide2">
+          <div class="slide-content">
+            <span class="img-caption">Image Two</span>
+          </div>
+        </div>
+
+        <div class="slide slide3">
+          <div class="slide-content">
+            <span class="img-caption">Image Three</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div id="arrow-right" class="arrow"></div>
+  </div>
+
+  <script type="text/javascript">
+    let slideImg = document.querySelectorAll('.slide');
+    let arrowLeft = document.querySelector('#arrow-left');
+    let arrowRight = document.querySelector('#arrow-right');
+    let current = 0;
+
+    function reset(){
+      //console.log(slideImg);
+      for( let i = 0; i < slideImg.length; i++ ){
+        slideImg[i].style.display = 'none';
+        //slideImg[i].style.opacity = '0';
+        //slideImg[i].style.transition = 'display 320ms ease';
+      }
+    }
+
+    // Init slide
+    function startSlide(){
+      reset();
+      slideImg[0].style.display = 'block';
+      //slideImg[0].style.opacity = '1';
+    }
+    
+    // Control Right Slide 
+    function slidePrev(){
+      reset();
+      slideImg[current - 1].style.display = 'block';
+      //slideImg[current - 1].style.opacity = '1';
+      current--;
+    }
+    
+    // Add RLeft click event
+    arrowLeft.addEventListener('click', function(){
+      if(current === 0){
+        current = slideImg.length;
+      }
+      slidePrev();
+    });
+
+    // Control Right Slide
+    function slideNext(){
+      reset();
+     slideImg[current + 1].style.display = 'block';
+    //slideImg[current + 1].style.opacity = '1';
+      current++;
+    }
+    // Add Right click event
+    arrowRight.addEventListener('click', function(){
+      if(current === slideImg.length - 1){
+        current = -1;
+      }
+      slideNext();
+    });
+
+    // Start Slider
+    startSlide();
+  </script>
+
+</body>
+</html>

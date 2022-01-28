@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Digit To Language Converter</title>
+	<style type="text/css">
+		.container{
+			width: 90%;
+			padding: 2rem;
+			margin: 0 auto;
+			text-align: center;
+			box-sizing: border-box;
+		}
+		#result{
+			color: green;
+			text-transform: capitalize;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<h2>Digit To Language Converter</h2>
+		<form id="input-form">
+			<input type="number" min="0" id="digit"><br>
+			<input type="submit" value="Digit to Lang" id="convert">
+		</form>
+		<p><mark id="digit-show"></mark> <span id="result"></span></p>
+	</div>
+	
+	<script type="text/javascript">
+	
+	var digit = document.querySelector("#digit");
+	var text = "";
+	var isBigDigit = false;
+	var hValue;
+	
+	const convertForm = document.querySelector("#input-form");
+	const digitShow = document.querySelector("#digit-show");
+	const convert = document.querySelector("#convert");
+	const result = document.querySelector("#result");
+	const number = ["zero", "one", "two", "three","four","five","six","seven","eight","nine","ten",
+					"eleven","twelve", "thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty",
+					"twenty one","twenty two","twenty three","twenty four","twenty five","twenty six","twenty seven","twenty eight","twenty nine","thirty",
+					"thirty one","thirty two","thirty three","thirty four","thirty five","thirty six","thirty seven","thirty eight","thirty nine","fourty",
+					"fourty one","fourty two","fourty three","fourty four","fourty five","fourty six","fourty seven","fourty eight","fourty nine","fifty",
+					"fifty one","fifty two","fifty three","fifty four","fifty five","fifty six","fifty seven","fifty eight","fifty nine","sixty",
+					"sixty one","sixty two","sixty three","sixty four","sixty five","sixty six","sixty seven","sixty eight","sixty nine","seventy",
+					"seventy one","seventy two","seventy three","seventy four","seventy five","seventy six","seventy seven","seventy eight","seventy nine","eighty",
+					"eightty one","eighty two","eighty three","eighty four","eighty five","eighty six","eighty seven","fourty eight","eightty nine","ninety",
+					"ninety one","ninety two","ninety three","ninety four","ninety five","ninety six","ninety seven","fourty eight","ninety nine",
+					];
+		
+	convertForm.addEventListener("submit", function(e){
+		
+		e.preventDefault();
+		//convert.addEventListener("click", startConvert);
+		
+		if(digit.value>0){
+			digitShow.innerHTML = digit.value;
+			if(digit.value<100){
+				result.innerHTML = "In Language: " +"<b>" +number[digit.value]+"</b>";
+			}else if(digit.value<1000){
+				makeHundred(digit.value);
+			}else if(digit.value<100000){
+				makeThousand(digit.value);
+			}else if(digit.value<10000000){
+				makeLakh(digit.value);
+			}else if(digit.value>9999999){
+				makeCore(digit.value);
+			}else{
+				console.log("Invalid Input");
+			}
+			
+		}else{
+			console.log("Digit must be higher than zero");
+		}	 
+		
+		digit.value = "";
+		digit.focus();
+	}); 
+	
+	function makeCore(dv){
+		var rVal = makeText(dv, 10000000, "core");
+		makeLakh(rVal);
+		
+	}
+	
+	function makeLakh(dv){
+		var rVal = makeText(dv, 100000, "lakh");
+		makeThousand(rVal);
+	}
+	
+	function makeThousand(dv){
+		var rVal = makeText(dv, 1000, "thousand");
+		makeHundred(rVal);
+	}
+	
+	function makeHundred(dv){
+		var rVal = makeText(dv, 100, "hundred");
+		hValue = rVal;	
+		displayText(hValue);
+		//console.log(hValue)	;
+	}  
+	
+	if(isBigDigit === true){
+	//displayText(rVal);
+	console.log(bigDigit);
+	//displayText(rVal);
+	//return rVal;
+	}else{ 
+	console.log(hValue);
+	//return rVal;
+	displayText(hValue);
+	}
+	
+	// displau text
+	function displayText(rvl){
+		var newText = text + number[rvl];
+		
+		newText = newText.replace("zero lakh", "");
+		newText = newText.replace("zero thousand", "");
+		newText = newText.replace("zero hundred", "");
+		newText = newText.replace("zero", "");
+		
+		result.innerHTML = "In Language: " + "<b>" + newText+ "</b>";
+		text = "";
+	}
+	
+	//function startConvert
+	function makeText(vlu, base, baseName){
+	
+	var val = vlu/base;
+	var remainVal = vlu % base;
+	var valInt = parseInt(val.toString());
+	
+	if(valInt>100){
+		isBigDigit = true;
+		bigDigit = valInt;
+		//makeHundred(valInt);
+	}
+	
+	text = text + number[valInt] + " " + baseName + ((valInt < 2) ? " " :"s ");
+	
+	return remainVal;
+	
+	}
+		
+	</script>
+	
+</body>
+</html>

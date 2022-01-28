@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale = 1">
+	<title>Isotop Image filtering</title>
+	
+
+	<style type="text/css">
+		
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		.wraper{
+			width: : 90%;
+			margin: 10px auto;
+		}
+		/*Navigation Styling */
+		.iso_nav{
+			text-align: center;
+		}
+		ul li{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+			padding: 10px 15px;
+			border: 1px solid #5274a9;
+			cursor: pointer;
+			-webkit-transition: all .5s ease;
+			-ms-transition: all .5s ease;
+			-moz-transition: all .5s ease;
+			transition: all .5s ease;
+		}
+		ul li:hover{
+			background: #5274a9;
+			color: #fff;
+
+		}
+		/* Main Body Styling*/
+		.main_iso{
+			width: 100%;
+		}
+		.main_iso .item{
+			width: 334px;
+			float: left;
+		}
+		.main_iso .item img{
+			width: 100%;
+			height: auto;
+		}
+		.active{
+			background: #5274a9;
+			color: #fff;
+		}
+
+	</style>
+
+
+
+
+</head>
+<body>
+
+	<div class="wraper">
+		<div class="iso_nav">
+			<ul>
+				<li data-filter="*" class="active">ALL Items</li>
+				<li data-filter=".web">Web Design</li>
+				<li data-filter=".graphic">Graphic Desing</li>
+				<li data-filter=".photo">Photography</li>
+			</ul>
+		</div>
+
+		<div class="main_iso">
+			
+			<div class="item web">
+				<img src="images/google-holi-festival-logo.jpg" alt="">
+			</div>
+			<div class="item photo">
+				<img src="images/google-les-paul-logo.jpg" alt="">
+			</div>
+			<div class="item web">
+				<img src="images/google-new-years-logo.jpg" alt="">
+			</div>
+			<div class="item graphic">
+				<img src="images/google-st-patricks-logo.jpg" alt="">
+			</div>
+			<div class="item photo">
+				<img src="images/google-valentines-logo.jpg" alt="">
+			</div>
+			<div class="item graphic">
+				<img src="images/google-winter-olympics-logo.jpg" alt="">
+			</div>
+			
+			
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.js"></script>
+	<script type="text/javascript">
+		$(".main_iso").isotope({
+			itemSelector:".item",
+			layoutMode: "fitRows"
+		});
+		// Isotope click fucntion
+		$(".iso_nav").click(function () {
+			$(".iso_nav ul li").removeClass("active");
+			$(this).addClass("active");
+		
+		var selector = $(this).attr("data-filter");
+		$(".main_iso").isotope({
+			filter: selector
+		});
+		return false;
+		});
+
+
+		alert("mahmudul Hasan");
+	</script>
+</body>
+</html>

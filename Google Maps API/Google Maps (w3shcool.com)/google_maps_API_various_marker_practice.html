@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewpot" content="width=device-width, initial-scale=1">
+		<title>Google Maps API Practice</title>
+		
+	</head>
+	
+	<body>
+		<h1>Google Maps API Practice</h1>
+		<div class="mapHolder" style="height: 500px; width: 100%;"></div>
+		<script type="text/javascript">
+			function myMap(){
+				var mapOption = {
+					center: new google.maps.LatLng(-33.9, 151.2),
+					zoom: 12,
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				};
+				var map = new google.maps.Map(document.getElementById("mapHolder"), mapOption);
+			}
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+	</body>
+</html>

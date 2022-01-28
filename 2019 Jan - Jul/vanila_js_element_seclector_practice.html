@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vanila Js Element Selector Practice</title>
+	<style type="text/css" media="screen">
+		body{
+			text-align: center;
+		}
+	</style>
+</head>
+<body id='bdy'>
+	<h2 class="heading_two">This is heading 2</h2>
+	<h2 class="heading_two_2">This is heading 2 2</h2>
+	<h2 id="heading_two_3">This is heading 2 3</h2>
+	<hr>
+	<button type="button" id="cp_generator">Create Color Plate</button>
+
+	<script type="text/javascript" charset="utf-8">
+		document.getElementById('heading_two_3').innerHTML = 'THIS IS HEADING 2 3 IN UPPERCASE';
+		/*var x = document.getElementsByTagName('h2')[0];
+		x.onClick(function(){
+			console.log("h2 is selected.")
+		});*/
+		var c =  0;
+		document.getElementById('heading_two_3').addEventListener('click', function(){
+			c++;
+			var red = Math.floor(Math.random()*256);
+			var green = Math.floor(Math.random()*256);
+			var blue = Math.floor(Math.random()*256);
+			/*red = red.toString();
+			green = green.toString();
+			blue = blue.toString();
+			c = c.toString();*/
+			//console.log(red + green + blue);
+			this.style.backgroundColor = 'rgb('+red+','+green+','+blue+')';
+			/*console.log('h2 element selected by javascript. rgba\('+red','+green+','+blue+'\)');*/
+		});
+		/*document.querySelectorAll('.heading_two').addEventListener('click', function(){
+			console.log('You\'ve clicked heading_two class');
+		});*/
+
+		// Color Plate generator function
+		var cpGenerator = document.getElementById('cp_generator'); 
+			var div = document.createElement('div');
+		cpGenerator.addEventListener('click', function(){
+			for(var n = 1; n<11; n++){
+				//var body = document.getElementById('bdy');
+			}
+		});
+				document.insertAfter(div, cpGenerator);
+	</script>	
+</body>
+</html>

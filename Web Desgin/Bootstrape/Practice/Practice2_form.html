@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Bootstrap Form Design</title>
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"></link>
+	</head>
+	<body>
+		<div class="container">
+			<form role="form" action="another_page.php" method="get">
+				<div class="form-group has-success has-feedback">
+					<label class="sr-only" for="Name">User Name</label>
+					<input class="form-control" type="text" placeholder="Enter User Name" required autocomplete id="Name"></input>
+					<span class="glyphicon glyphicon-ok form-control-feedback"></span>
+					<span class="help-block">Never Input Your Pen Name</span>
+					
+				</div>
+				<div class="form-group has-warning has-feedback">
+					<label class="sr-only" for="Email">Your Email Address</label>
+					<input type="email" class="form-control" id="Email" placeholder="Enter Eamil" autocomplete required></input>
+					<span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+				</div>
+				<div class="form-group">
+					<label for="psw" class="sr-only">Password</label>
+					<input class="form-control" type="password" placeholder="Enter Password" required id="psw"></input>
+					<span class="help-block">Password should be hard to guise another......</span>
+				</div>
+				<div class="checkbox"><label><input type="checkbox" checked> Remember me</label></div>
+				<button type="submit" class="btn btn-lg btn-success">Log in</button>
+			</form>
+			
+			<h3>Form (Horizontal)</h3>
+			<form class="form-horizontal" role="form">
+				<div class="form-group has-error has-feedback">
+					<label class="control-label col-sm-3" for="UserName">User Name</label>
+					<div class="col-sm-9">
+						<input class="form-control" type="text" placeholder="Enter User Name" required autocomplete id="UserName"></input>
+						<span class="glyphicon glyphicon-remove form-control-feedback"></span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-3" for="UserEmail">User Email</label>
+					<div class="col-sm-9">
+						<input type="email" class="form-control" id="UserEmail" placeholder="Enter Eamil" autocomplete required></input>
+						<span class="help-block">Email should be valid for use......</span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-3" for="psw">User Password</label>
+					<div class="col-sm-9">
+						<input class="form-control" type="password" placeholder="Enter password" required id="psw"></input>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-3" for="Select">Choose Your University</label>
+					<div class="col-sm-9">
+						<select class="form-control" name="University" id="select">
+							<option value="Dhaka">University of Dhaka</option>
+							<option value="Rajshahi">University of Rajshahi</option>
+							<option value="RUET">Rajshahi University of Engineering and Technology</option>
+							<option value="BUET" selected>Bangladesh University of Engineering and Technology</option>
+							<option value="CUET">Chitagong University of Engineering and Technology</option>
+							<option value="KUET">Khulna University of Engineering and Technology</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-3" for="Select">Choose Your Universities (Multiple)</label>
+					<div class="col-sm-9">
+						<select multiple class="form-control" name="University" id="select">
+							<option value="Dhaka">University of Dhaka</option>
+							<option value="Rajshahi">University of Rajshahi</option>
+							<option value="RUET">Rajshahi University of Engineering and Technology</option>
+							<option value="BUET" selected>Bangladesh University of Engineering and Technology</option>
+							<option value="CUET">Chitagong University of Engineering and Technology</option>
+							<option value="KUET">Khulna University of Engineering and Technology</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-3" for="Comment">Your Comment</label>
+					<div class="col-sm-9">
+						<textarea class="form-control" id="Comment"  rows="3" placeholder="Enter Your Comment Here"></textarea>
+						<span class="help-block">Email should be valid for use......</span>
+					</div>
+				</div>
+				<div class="form-group">
+				<label class="control-label col-sm-3" for="Radio">Select Your Nationality</label>
+					<div class="col-sm-9">
+						<div class="radio-inline">
+							<label><input type="radio" name="nationality" id="Radio"> English</label>
+						</div>
+						<div class="radio-inline">
+							<label><input type="radio" name="nationality" id="Radio"> Bangladehi</label>
+						</div>
+						<div class="radio-inline">
+							<label><input type="radio" name="nationality" id="Radio"> Arabian</label>
+						</div>
+						<div class="radio-inline">
+							<label><input type="radio" name="nationality" id="Radio"> Pakistani</label>
+						</div>
+						<div class="radio-inline">
+							<label><input type="radio" name="nationality" id="Radio"> Italian</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-9 col-sm-offset-3">
+					<div class="checbox">
+						<label><input type="checkbox"> Remember me</label>
+					</div>
+				</div>
+				<div class="col-sm-9 col-sm-offset-3">
+					<button type="submit" class="btn btn-info btn-block btn-md">Log in</button>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

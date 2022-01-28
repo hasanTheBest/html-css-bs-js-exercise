@@ -1,0 +1,128 @@
+<!doctype>
+<html lang="en">
+<head>
+	<meta name="Image Slider" keyword= >
+	<meta charset="UTF-8">
+	<title>Slider Practice Image four</title>
+ <style type="text/css">
+ body{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+ }
+	div#container{
+		width: 720px;
+		margin: 20px auto;
+		height: 450px;
+		position: relative;
+	}
+	div#sliderimg img{
+		width: 720px;
+		height: 450px;
+	}
+	div#left{
+		width: 50px;
+		height: 450px;
+		position absolute;
+		top: 0;
+		left: 0;
+		float: left;
+	}
+	div#left img{
+		width: 30px;
+		height: 20px;
+		position: absolute;
+		top: 40%;
+		left: 0;
+		opacity: 0.35;
+	}
+	div#right{
+		width: 50px;
+		height: 450px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		float: right;
+	}
+	div#right img{
+		width: 30px;
+		height: 20px;
+		position: absolute;
+		top: 40%;
+		right: 0;
+		opacity: 0.35;
+	}
+	
+	div#data{
+		background-color: purple;
+		max-width: 505px;
+		height: auto;
+		border: 1px solid green;
+		margin: 0 auto;
+		float: left;
+	}
+	
+	
+	div#data span{
+		width: 30%;
+		float: left;
+		padding: 1%;
+		margin: 1%;
+	}
+	div#data input, textarea{
+		width: 55%;
+		padding: 1%;
+		float: right;
+		margin: 1%;
+	}
+ </style>
+ <script type="text/javascript">
+	var count = 1;
+	var total = 5;
+	function slider(x){
+		var image = document.getElementById("img");
+		count = count + x;
+		image.src = "pics/aftab"+count+".jpg";
+		if(count > 4){
+			count = 1;
+		}
+		if(count < 1){
+			count = total;
+		}
+	}
+	window.setInterval(function sliderA(){
+		var image = document.getElementById("img");
+		count = count + 1;
+		image.src = "pics/aftab"+count+".jpg";
+		if(count > 4){
+			count = 1;
+		}
+		if(count < 1){
+			count = total;
+		}
+	}, 3000);
+
+ </script>
+</head>
+<body onLoad="sliderA()">
+	<div id="container">
+		<div id="sliderimg">
+			<img src="pics/aftab1.jpg" alt="Slider Image Family" id="img"/>
+		</div>
+		<div id="left"><img src="pics/sprite_prev.png" alt="Previous" onClick="slider(-1)"/></div>
+		<div id="right"><img src="pics/sprite_next.png" alt="Next" onClick="slider(1)"/></div>
+	</div>
+		<div id="data">
+					<form mailto="rainbowmahmud@gmail.com">
+						<span>Your Name</span><input type="text" name="username"/></br>					
+						<span>Month</span><input type="month"/></br>
+						<span>Week</span><input type="week" value="calender"/></br>
+						<span>Time</span><input type="time"/></br>
+						<span>LocalDate</span><input type="datetime-local" value="calender"/></br>
+						<span>Your comment</span><textarea rows="5" cols="25" placeholder="Put Your Comment"></textarea><br>
+						<input type="button" name="submit" value="Send"/>
+					</form>
+		</div>
+
+</body>
+</html>

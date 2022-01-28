@@ -1,0 +1,185 @@
+<!Doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML Table Element Tag and CSS Styles</title>
+		<style>
+			table{
+				border: 1px solid black;
+				width: 600px;
+				border-collapse: collapse;
+			}
+			.football{
+				caption-side: bottom;
+				background-color: azure;
+			}
+			.football td, th{
+				border: 1px solid black;
+				text-align: center;
+				padding: 3px;
+			}
+			.football th{
+				background-color: green;
+				color: white;
+				font-weight: bold;
+			}
+			.football tr:nth-child(odd){
+				background-color: lightBlue;
+			}
+			.football tr:hover{
+				background-color: hotpink;
+				color: white;
+			}
+			#datacollection{
+				width: 375px;
+				margin-bottom: 20px;
+			}
+			#datacollection label{
+				width: 100px;
+				float: left;
+			}
+			#datacollection textarea, form input{
+				width: 265px;
+				background-color: azure;
+				padding: 4px 0px;
+				margin: 3px 0px;
+			}
+			#datacollection input:last-child{
+				float: right;
+				margin: 3px 7px 0px 0px;
+			}
+			#datacollection input:focus{
+				background-color: lightblue;
+			}
+			#datacollection textarea:focus{
+				background-color: lightblue;
+			}
+			ul.gallary{
+				list-style-type: none;
+				clear: both;
+				margin: 0px;
+				padding: 10px;
+			}
+			ul.gallary li{
+				display: inline-block;
+				position: relative;
+				
+			}
+			ul.gallary span{
+				margin-left: -10000px;
+				position: absolute;
+				width: 320px;
+				height: 35px;
+				color: white;
+				background-color: grey;
+				opacity: 0.75;
+				text-align: center;
+				left: 0px;
+				bottom: 0px;
+			}
+			ul.gallary li:hover span{
+				margin-left: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>This is awesome Table</h1>
+		<table class="football">
+			<caption>NFL Football Status</caption>
+			<thead>
+				<tr>
+					<td colspan="5">Best NFL Quarterback</td>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<td colspan="5">Best NFL Quarterback Summary</td>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<th></th>
+					<th scope="col">Brazil</th>
+					<th scope="col">Arzentina</th>
+					<th scope="col">Itali</th>
+					<th colspan>England</th>
+				</tr>
+				
+				<tr>
+					<th scope="row">Naymer</th>
+					<td>50</td>
+					<td>50</td>
+					<td>50</td>
+					<td>50</td>
+				</tr>
+				<tr>
+					<th rowspan>Messi</th>
+					<td>50</td>
+					<td>50</td>
+					<td>50</td>
+					<td>50</td>
+				</tr>
+				<tr>
+					<th rowspan>Ronaldo</th>
+					<td>50</td>
+					<td>50</td>
+					<td>50</td>
+					<td>50</td>
+				</tr>
+				<tr>
+					<th rowspan>Huguaen</th>
+					<td>50</td>
+					<td>50</td>
+					<td>50</td>
+					<td>50</td>
+				</tr>
+				<tr>
+					<th rowspan>Runi</th>
+					<td>50</td>
+					<td>50</td>
+					<td>50</td>
+					<td>50</td>
+				</tr>
+				<tr>
+					<th rowspan>Tavej</th>
+					<td>50</td>
+					<td>50</td>
+					<td>50</td>
+					<td>50</td>
+				</tr>
+				<tr>
+					<th rowspan>Arsenal</th>
+					<td>50</td>
+					<td>50</td>
+					<td>50</td>
+					<td>50</td>
+				</tr>
+			</tbody>
+		</table>
+		<hr>
+		<form id="datacollection">
+			<label for="name">Name</label> 
+			<input type="text" name="username"  placeholder="Your Name" required="required"/><br>
+			<label for="password">Password</label> 
+			<input type="password" name="password" placeholder="Your Password" required="required"/><br>
+			<label for="Comment">Comment</label><textarea cols="20" rows="7" placeholder="Input Your Comment Here"></textarea><br>
+			<input type="button" name="button" value="Submit"/>
+		</form>
+		<ul class="gallary">
+			<li><img src="pics/aftab (1).jpg" alt="aftab" width="320" height="240"/>
+			<span>Aftab On Chair at Home</span></li>
+			<li><img src="pics/aftab (2).jpg" alt="Aftab" width="320" height="240"/>
+			<span>Aftab at Patul Road</span></li>
+			<li><img src="pics/aftab (3).jpg" alt="Aftab" width="320" height="240"/>
+			<span>Aftab at Patul two</span></li>
+			<li><img src="pics/aftab (4).jpg" alt="Aftab" width="320" height="240"/>
+			<span>Aftab at collage</span></li>
+			<li><img src="pics/aftab (5).jpg" alt="Aftab" width="320" height="240"/>
+			<span>Aftab at Rahshahi</span></li>
+			<li><img src="pics/aftab (1).jpg" alt="aftab" width="320" height="240"/>
+			<span>Aftab On Chair at Home</span></li>
+			<li><img src="pics/aftab (2).jpg" alt="Aftab" width="320" height="240"/>
+			<span>Aftab at Patul Road</span></li>
+		</ul>
+	</body>
+</html>

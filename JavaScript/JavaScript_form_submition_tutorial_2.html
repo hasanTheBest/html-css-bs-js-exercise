@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+	<head>
+		<title>JavaScript form Submiting 2</title>
+		<style type="text/css">
+			table{
+				cellspacing: 2px;
+				cellpadding: 2px;
+				border: 1px solid grey;
+			}
+			input[type=submit]{
+				width: 100%;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			function validate()
+			{
+				if(document.myform.name.value == "")
+				{
+					alert("Please provide your name!");
+					document.myform.name.focus();
+					return false;
+				}
+				
+				if(document.myform.email.value == "")
+				{
+					alert("Please provide your email!");
+					document.myform.email.focus();
+					return false;
+				}
+				
+				if(document.myform.zip.value == "" 
+				|| document.myform.zip.value.length != "5"
+				|| isNaN(document.myform.zip.value))
+				{
+					alert("Please enter your country zip code at least 5 characters!");
+					document.myform.zip.focus();
+					return false;
+				}
+				if(document.myform.country.value == "" || document.myform.country.value == "-1")
+				{
+					alert("Please provide your country name!");
+					document.myform.country.focus();
+					return false;
+				}
+				return(true);
+			}
+			
+			function validate_Email()
+			{
+				var emailID = document.form.Email.value;
+				var atspot = emailID.indexOf("@");
+				var dotspot = emailID.lastIndexOf(".");
+				if(atspot < 1 || (dotspot - atspot < 2))
+				{
+					alert("Please provide correct Email Address!");
+					document.form.Email.focus();
+					return false;
+				}
+				return (true);
+			}
+		</script>
+	</head>
+	<body>
+		
+		<form name="myform" action="another_page.php" method="get" onSubmit="return(validate());">
+			<table>
+				<tr>
+					<td>Name</td>
+					<td><input type="text" name="name"/></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input type="email" name="email"/></td>
+				</tr>
+				<tr>
+					<td>Zip Code</td>
+					<td><input type="text" name="zip"/></td>
+				</tr>
+				<tr>
+					<td>Country</td>
+					<td>
+						<select name="country">
+							<option value="-1" selected>[Choose yours]</option>
+							<option value="1">Bangladesh</option>
+							<option value="2">Pakistan</option>
+							<option value="3">Soudi Arabia</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="Submit"/></td>
+				</tr>
+			</table>
+		</form>
+			<form action="email_submission.php" method="get" name="form" onSubmit="return(validate_Email());">
+				<p>
+					<span>Additional Email Address: </span><input type="text" name="Email"/>
+					<input type="submit" value="Email Submission"/>
+				</p>
+			</form>
+	<body>
+</html>

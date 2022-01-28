@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+	<head>
+		<title>JavaScript- Array Practice</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<script type="text/javascript">
+			//There three types of making Array in JavaScript-
+			// Regular Array
+			var Brothers = new Array();
+			Brothers[0] = "Mahmudul Hasan";
+			Brothers[1] = "Istiak Ahmed";
+			Brothers[2] = "Ekhtiar Ahmed";
+			Brothers[3] = "Ismail Hossen";
+			Brothers[4] = "Imtiaz Ahmed Siam";
+			// Second type of Array is a condensed array--
+			var Sisters = new Array("Anzuara Khatun", "Arzia Akter Rukay", "Asifa Rahman");
+			// Third type of Array is a literal Array --- most common used array system----
+			var Cousin = ["Alif Hossen", "Sakibul Hasan Rony", "Ya Ali"];
+			// Accessment of any array--
+			document.write(Brothers[4] + "</br>"); //Result Siam
+			document.write(Sisters + "</br>");
+			document.write(Cousin[1] + "</br>");
+			//Addition of two Array---
+			var Bro = [" Alif Hossain", " Ya Ali "];
+			var Sis = [ "They Have no Sisters", " null "];
+			var Parents = ["Aslam Islam", " Asma Khatun "];
+			document.write(Parents.concat(Bro) + "</br>");
+			//Addition of three Array ----
+			document.write(Parents.concat(Bro, Sis));
+			var famR = ["Aychan Ali", "Runa Khatun"];
+			var children = ["Roni", "Roakay"];
+			var arents = ["Akbar Ali", "Kusum Begum"];
+			document.write(arents.concat(famR, children) + "</br>");
+			
+			// Conects all elements of a String----
+			var fruits = ["Apple", "Banana", "Pine-aple", "Mango", "Jackfruit"];
+			document.write(fruits.join("+") + "</br>");
+			document.write(fruits.join(" and ") + "</br>");
+			
+			// Remove last element of an Array -----
+			var flowers = ["Daisy", "Rose", "Shapla", "Joba", "Belli"];
+			document.write(flowers.pop() + "</br>");
+			document.write(flowers + "</br>");
+			
+			//Push new element to the last position of an Array ---- push()
+			var colors = ["Red ", "Yellow ", "Green ", "Blue ", "Pink "];
+			document.write(colors.push("Azure ") + "</br>");
+			document.write(colors + "</br>");
+			document.write(colors.push("Violet", " Magenta", " White", " Purple.") + "</br>");
+			document.write(colors + "</br>");
+			
+			//Reverse of element decoration in an Array ----- reverse()
+			var mama = ["Ziaul Haque", " Yusuf Ali", " Yeahia Ali", " Elias Ali"];
+			document.write(mama + "</br>");
+			document.write(mama.reverse() + "</br>");
+			
+			//Remove first element of an Array --- shift()
+			var paternalUncle = ["Shoriful Islam", " Aslam Ali", " Akram Ali", " Aychan Ali", " Assadul Islam"];
+			document.write(paternalUncle + "</br>");
+			document.write(paternalUncle.shift() + "</br>");
+			document.write(paternalUncle + "</br>");
+			
+			//Alphabitically Assending of an Array --- sort()
+			var paternalAunty = [" Asma Begum", " Nilufa Begum", " Runa Begum", " Alufa Begum"];
+			document.write(paternalAunty + "</br>");
+			document.write(paternalAunty.sort() + "</br>");
+			
+			//Ascending of any number ----- sort() nemurically
+			function sortNumber(a, b){
+				return a - b;
+			}
+			var number = ["4", "56", "223", "45", "78", "28"];
+			document.write(number.sort(sortNumber) + "</br>");
+			
+			// Descending of any number ----- sort () nemurically
+			function sortDescending(a, b){
+				return b - a;
+			}
+			var n = ["4", "56", "223", "45", "78", "28"];
+			document.write(n.sort(sortDescending) + "</br>");
+			
+			//Add a new element to the fast position of an array ----- unsift() method
+			var friends = ["Rakib", "Rewaz", "Mehedi", "Solaiman", "Barkullah"];
+			document.write(friends.unshift("Aftab") + "</br>");
+			document.write(friends + "</br>");
+			
+			//Add a new element to the second position of an array --- splice() method
+			var maternalCousin = ["Sabit", "mahi", "Bristi", "Mim"];
+			document.write(maternalCousin.splice(2, 0, "Imtiaz Ahmed Siam") + "</br>");
+			document.write(maternalCousin + "</br>");
+			
+			//Transform an array to String ---- toString() method
+			var MHID = ["Name: Mahmudul Hasan", " StudentId: 1510427184" ];
+			document.write(MHID.toString() + "</br>")
+		</script>
+	</body>
+</html>

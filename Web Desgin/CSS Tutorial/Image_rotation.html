@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Image rotation tutorial</title>
+		<meta charset="UTF-8">
+		<meta name="Image Rotation" discription="Autors">
+		
+		<style type="text/css">
+			div.container{
+				width: 700px;
+				height: 700px;
+				position: relative;
+				margin: 0 auto;
+				padding: 6px;
+				border: 1px dashed green;
+			}
+			div.divContainer{
+				width: 650px;
+				height: 650px;
+				position: absolute;
+				margin: 0 auto;
+				top: 142px;
+			}
+			
+			div.image1{
+				position: absolute;
+				width: 200px;
+				height: 200px;
+				transform: rotate(225deg);
+				top: 50px;
+				left: 55px;
+				
+			}
+			div.image2{
+				position: absolute;
+				left: 336px;
+				width: 200px;
+				height: 200px;
+				top: 52px;
+				transform: rotate(45deg);
+				
+			}
+			div.text1{
+				position: absolute;
+				transform: rotate(45deg);
+				left: 195px;
+				top: -90px;
+				width: 200px;
+				height: 200px;
+				background-color: #800080;
+			}
+			div.text2{
+				    position: absolute;
+					transform: rotate(45deg);
+					left: 195px;
+					top: 193px;
+					width: 200px;
+					height: 200px;
+					background-color: #A52A2A;
+
+			}
+			div.textHolder p{
+				transform: rotate(-45deg);
+			}
+			div.textHolderf{
+				position: absolute;
+			} 
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="divContainer">
+				<div class="image1">
+					<img src="../Sabit1.jpg" alt="aftab" width="200px" height="200px">
+				</div>
+				<div class="text1">
+					<div class="textHolder"><p>Shin Mim Sabit</br>Naldanga, Natore.</p></div>
+				</div>
+				<div class="image2">
+					<img src="../Sabit1.jpg" alt="aftab" width="200px" height="200px">
+				</div>
+				<div class="text2">
+					<div class="textHolder"><p>Shin Mim Sabit</br>Naldanga, Natore.</p></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

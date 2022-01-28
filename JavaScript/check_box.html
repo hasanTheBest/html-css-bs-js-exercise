@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Check Box Practice</title>
+		
+		<script type="text/javascript">
+			
+			function check_box (){
+				var sports = document.getElementById("sports").checked;
+				var electronics = document.getElementById("Electronics").checked;
+				var tools = document.getElementById("Tools").checked;
+				
+				if(sports == false && electronics == false && tools == false){
+					alert("plaease check a catagory");
+					return false;
+				}
+				else{
+					return true;
+				}
+			}
+			
+		</script>
+		</head>
+		<body>
+			<p>Choose a catagory you are interested in?</p>
+			<form action="submission.html" method="get" onsubmit="return check_box();">
+				Sports	<input type="checkbox" name="interest" value="sports" id="sports"/></br>
+				Electronics	<input type="checkbox" name="interest" value="Electronics" id="Electronics"/></br>
+				Tools <input type="checkbox" name="interest" value="Tools" id="Tools"/></br>
+				<input type="submit" value="submit">
+			</form>
+		</body>
+</html>

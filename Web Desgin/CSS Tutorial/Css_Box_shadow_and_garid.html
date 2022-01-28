@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<style type="text/css">
+			#div1, #div2, #div3{
+				float: left;
+				margin-left: 10px;
+				margin-left [last-child]: none;
+			}
+			#div1{
+				width: 100px;
+				height: 100px;
+				border: 2px solid black;
+				margin-bottom: 10px;
+				box-shadow: 5px 5px 5px 2px grey;
+			}
+			#div2{
+				width: 100px;
+				height: 100px;
+				border: 2px solid black;
+				margin-bottom: 10px;
+				box-shadow: 5px 5px 5px 2px grey inset;
+			}
+			#div3{
+				width: 100px;
+				height: 100px;
+				border: 2px solid black;
+				box-shadow: 0px 0px 5px 2px hotpink;
+				margin-bottom: 10px;
+			}
+			#div4, #div5, #div6{
+				float: left;
+				margin-left: 10px;
+				width: 100px;
+				height: 100px;
+				border: 2px solid black;
+				text-align: center;
+				padding-top: 10px;
+			}
+			#div4{
+				border-radius: 30px;
+			}
+			#div5{
+				border-radius: 100px;
+			}
+			#div6{
+				border-top-right-radius: 30px;
+			}
+			/*
+			Browser Prefix
+			moz = mozila-firefox
+			ms = Internet Explorer
+			webkit = Safari/Chrome
+			*/
+			#div7, #div8, #div9, #div10, #div11, #div12,
+			#div13, #div14, #div15, #div16, #div17, #div18{
+				float: left;
+				margin: 10px;
+				width: 100px;
+				height: 100px;
+				border: 1px solid black;
+			}
+			#div7{
+				background: -moz-linear-gradient(45deg, green, red, yellow);
+				background: -o-linear-gradient(45deg, green, red, yellow);
+				background: -ms-linear-gradient(45deg, green, red, yellow);
+				background: -webkit-linear-gradient(45deg, green, red, yellow);
+				background: linear-gradient(45deg, green, red, yellow);
+			}
+			#div8{
+				background: -moz-linear-gradient(left top, green, red, yellow);
+				background: -o-linear-gradient(left top, green, red, yellow);
+				background: -ms-linear-gradient(left top, green, red, yellow);
+				background: -webkit-linear-gradient(left top, green, red, yellow);
+				background: linear-gradient(left top, green, red, yellow);
+			}
+			#div9{
+				background: -moz-repeating-linear-gradient(left top, green 60%, red 20%, yellow 20%);
+				background: -o-repeating-linear-gradient(left top, green 60%, red 20%, yellow 20%);
+				background: -ms-repeating-linear-gradient(left top, green 60%, red 20%, yellow 20%);
+				background: -webkit-repeating-linear-gradient(left top, green 60%, red 20%, yellow 20%);
+				background: repeating-linear-gradient(left top, green 60%, red 20%, yellow 20%);
+			}
+			#div10{
+				background: -moz-radial-gradient(green 20%, red 30%, purple 60%);
+				background: -o-radial-gradient(green 60%, red 20%, yellow 30%);
+				background: -ms-radial-gradient(green 20%, red 30%, purple 60%);
+				background: -webkit-radial-gradient(red 20%, yellow 30%, blue 60%);
+				background: radial-gradient(green 60%, blue 20%, red 20%);
+			}
+			/* You can a change to an element and have it slowly Transition
+			ease : Increaseing chage
+			ease-in : Increase at start
+			ease-out : Decrease at end
+			ease-in-out : Increase at start, and Decrease at end
+			linear : Constant change
+			*/
+			#div11:hover{
+				background-color: red;
+				border-radius: 20px;
+				-webkit-transition: 2s ease-in-out;
+				-ms-transition: 2s ease-in-out;
+				-moz-transition: 2s ease-in-out;
+				transition: 2s ease-in-out;
+			}
+			#div12:hover{
+				-webkit-transform: scale(2);
+				-o-transform: scale(2);
+				-moz-transform: scale(2);
+				-ms-transform: scale(2);
+				background-color: hotpink;
+			}
+			#div13:hover{
+				-webkit-transform: skew(20deg, 10deg);
+				-o-transform: skew(20deg, 10deg);
+				-moz-transform: skew(20deg, 10deg);
+				-ms-transform: skew(20deg, 10deg);
+				background-color: purple;
+			}
+			#div14:hover{
+				-webkit-transform: translate(20px, 20px);
+				-o-transform: translate(20px, 20px);
+				-moz-transform: translate(20px, 20px);
+				-ms-transform: translate(20px, 20px);
+				background-color: lightBlue;
+			}
+			#div15{
+				background: -webkit-linear-gradient(45deg, green, pink, red);
+				background: -o-linear-gradient(45deg, green, pink, red);
+				background: -moz-linear-gradient(45deg, green, pink, red);
+				background: -ms-linear-gradient(45deg, green, pink, red);
+				background: linear-gradient(45deg, green, pink, red);
+			}
+			#div16{
+				background: -webkit-linear-gradient(right bottom, pink, lightBlue);
+				background: -o-linear-gradient(center, green, red, green);
+				background: -moz-linear-gradient(center, green, red, green);
+				background: -ms-linear-gradient(center, green, red, green);
+				background: linear-gradient(center, green, red, green);
+			}
+			#div17{
+				background: -webkit-radial-gradient(red, green);
+				background: -ms-radial-gradient(red, green);
+				background: -o-radial-gradient(red, green);
+				background: -moz-radial-gradient(red, green);
+			}
+
+		</style>
+	<head>
+	<body>
+		<h2>There is awesome CSS design with box shadow and gradient</h2>
+		<div id="div1"></div>
+		<div id="div2"></div>
+		<div id="div3"></div>
+		<div id="div4">Rounded</div>
+		<div id="div5">Circle</div>
+		<div id="div6">Tab</div>
+		<div id="div7"></div>
+		<div id="div8"></div>
+		<div id="div9"></div>
+		<div id="div10"></div>
+		<div id="div11"></div>
+		<div id="div12"></div>
+		<div id="div13"></div>
+		<div id="div14"></div>
+		<div id="div15"><b>Mahmudul hasan,</b></br><i>Rajshahi University</i></div>
+		<div id="div16"></div>
+		<div id="div17"></div>
+		<div id="div18"></div>
+	</body>
+</html>

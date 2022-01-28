@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Form Validation Practic</title>
+		
+		<script type="text/javascript">
+		
+		function check_box(){
+		
+			var checked_yes = document.getElementById("auto_renew_yes").checked;
+			var checked_no = document.getElementById("auto_renew_no").checked;
+			
+			if (checked_yes == false && checked_no == false){
+				alert("Please select an option");
+				return false;
+			}else{
+				return true;
+			}
+		}
+		
+		</script>
+		
+	</head>
+	<body>
+		<h1>Radio Box Tutorial Practice</h1>
+		<p>Do You want to great Hablu?</p>
+		<form action="submission.html" method="get" onsubmit="return check_box();">
+			Yes <input type="radio" name="auto_renew" value="yes" id="auto_renew_yes"/></br>
+			No <input type="radio" name="auto_renew" value="no" id="auto_renew_no"/></br>
+			<input type="submit" value="submit"/>
+
+		</form>
+	</body>
+</html>

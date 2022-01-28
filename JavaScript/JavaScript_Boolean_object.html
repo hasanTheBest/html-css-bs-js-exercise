@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>JavaScript- Boolean Object</title>
+	</head>
+	<body>
+	
+	<script type="text/javascript">
+		
+		//Make a Boolean Object ---
+		var firstBoolean = new Boolean();
+		
+		//Boolean can be a string or integer, But below can'nt use as Boolean value---
+		var myBoolean = new Boolean();
+		var myBoolean = new Boolean("");
+		var myBoolean = new Boolean(0);
+		var myBoolean = new Boolean(null);
+		var myBoolean = new Boolean(false);
+		var myBoolean = new Boolean(NaN);
+		
+		//Test of Boolean Object By example----
+		var b2 = new Boolean("");
+		var b3 = new Boolean(NaN);
+		var b4 = new Boolean(false);
+		var b5 = new Boolean(0);
+		var b6 = new Boolean(1);
+		var b7 = new Boolean(null);
+		
+		document.write("Empty string is a Boolean " + b2 + "</br>");
+		document.write("0 is a Boolean " + b5 + "</br>");
+		document.write("1 is a Boolean " + b6 + "</br>");
+		document.write("false is a Boolean " + b4 + "</br>");
+		document.write("null is a Boolean " + b7 + "</br>");
+		document.write("NaN is a Boolean " + b3 + "</br>");
+		document.write(" is a Boolean " + b2 + "</br>");
+		
+		//JavaScript Math Object ----
+		document.write(Math.round(4.7) + "</br>");
+		document.write(Math.random() + "</br>");
+		document.write(Math.floor(Math.random()*11) + "</br>");
+		document.write(Math.max(10, 100, 1000, -10, -200) + "</br>");
+		document.write(Math.min(10, 100, 1000, -10, -2000) + "</br>");
+		
+		//Constants of JavaScript Math Object--- are below
+		document.write(Math.E + "</br>");
+		document.write(Math.PI + "</br>");
+		document.write(Math.LN2 + "</br>");
+		document.write(Math.LOG2E + "</br>");
+		document.write(Math.LOG10E + "</br>");
+		document.write(Math.SQRT2 + "</br>");
+		document.write(Math.SQRT1_2 + "</br>");
+		
+		/*
+		Math Object Methods are below ---
+		abs(x), acos(x), asin(x), atan(x), atan2(y,x), ceil(x), cos(x), exp(x), 
+		floor(x), log(x), max(x,y,z,.......), min(x,y, .........), pow(x),
+		random(), round(), sin(x), sqrt(x), tan(x).
+		*/
+	</script>
+	</body>
+</html>

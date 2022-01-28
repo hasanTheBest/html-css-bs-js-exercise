@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Details, Summary Elements to create Menu</title>
+		
+		<style type="text/css">
+			body{
+				margin: 0;
+			}
+			.leftMenu{
+				width: 15%;
+				min-width: 150px;
+			}
+			.leftMenu > details > summary{
+				cursor: pointer;
+				background: #51C435;
+				margin: 6px;
+				padding: 8px;
+				color: white;
+			}
+			.leftMenu > details > summary:hover{
+				background: #2F99FE;
+			}
+			<!--.leftMenu > details > summary::-webkit-details-marker{
+					display: visible;
+			}-->
+			.leftMenu > details > a{
+				display: block;
+				text-decoration: none;
+				color: #030707;
+				font-size: 13px;
+				margin: 3px 6px 3px 18px;
+				padding: 8px;
+				background: #521DB8;
+			}
+			.leftMenu > details > a:hover{
+				background: #D2D447;
+				font-weight: bold;
+				font-size: 13px;
+				color: white;
+			}
+			.leftMenu > details > a:before{
+				content: ">  ";
+			}
+			
+		</style>
+	</head>
+	
+	<body>
+		<div class="leftMenu">
+			<details>
+				<summary>Menu Items 3</summary>
+				<a href="#">Subcatagory A</a>
+				<a href="#">Subcatagory B</a>
+				<a href="#">Subcatagory C</a>
+			</details>
+			
+			<details>
+				<summary>Menu Items 1</summary>
+				<a href="#">Subcatagory A</a>
+				<a href="#">Subcatagory B</a>
+				<a href="#">Subcatagory C</a>
+				<a href="#">Subcatagory F</a>
+				<a href="#">Subcatagory G</a>
+				<a href="#">Subcatagory H</a>
+			</details>
+			
+			<details>
+				<summary>Menu Items 2</summary>
+				<a href="#">Subcatagory A</a>
+				<a href="#">Subcatagory B</a>
+				<a href="#">Subcatagory C</a>
+				<a href="#">Subcatagory D</a>
+				<a href="#">Subcatagory E</a>
+			</details>
+		</div>
+	</body>
+</html>

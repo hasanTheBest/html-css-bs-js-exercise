@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Bootstrap Custom Navigation Bar</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+		<script type="text/javascript" src="bootstrap.min.js"></script>
+		<script src="jquery-1.11.3.min.js"></script>
+		
+		<style type="text/css">
+			.navbar {
+				border-radius: 4px;
+			}
+			.navbar-default {
+				background-color: #19A15E;
+				border-color: #darkgreen;
+			}
+			.navbar-default .navbar-nav > li > a {
+				color: rgba(0,0,0,0.5);
+				transition: all 100ms linear;
+			}
+			.navbar-default .navbar-nav > li > a:hover {
+				color: rgba(255,255,255,0.7);
+			}
+			.navbar-default .navbar-nav > .active > a{
+				background-color: rgba(0,0,0,0.3);
+				color: rgba(255,255,255,0.8);
+				transition: all 100ms linear;
+			}
+			.navbar-default .navbar-nav > .active > a:hover{
+				background-color: rgba(255,255,255,0.2);
+				color: rgba(255,255,255,0.8);
+			}
+			#lg, #usr{
+				background-color: rgba(0,255,0,0.2);
+				
+				color: gray;
+				border: none;
+				transition: all 100ms linear;
+			}
+			#lg:hover, #usr:hover{
+				background-color: rgba(0,255,255,0.4);
+				color: white;
+				border: none;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-default">
+			<div class="navbar-header">
+				<a href="" class="navbar-brand">Hasan</a>
+				<button type="button" class="navbar-toggle" data-target="#myNav" data-toggle="collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="myNav">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">First</a></li>
+					<li><a href="#">Second</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Thrid <span class="caret"></span></a>
+						<ul class="dropdown-menu" id="drp">
+							<li><a href="#">Three One</a></li>
+							<li><a href="#">Three Two</a></li>
+							<li><a href="#">Three Three</a></li>
+							<li><a href="#">Three Four</a></li>
+							<li><a href="#">Three Five</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Fourth</a></li>
+					<li><a href="#">Fifth</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#" ><span class="glyphicon glyphicon-user"></span>LogIn</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Join</a></li>
+				</ul>
+				
+				<div class="navbar-btn text-center">
+					<a href="#" class="btn btn-default btn-primary" id="lg">LogIn</a>
+					<a href="#" class="btn btn-default btn-info" id="usr">Join</a>
+				</div>
+			</div>
+			
+		</nav>
+	</body>
+</html>

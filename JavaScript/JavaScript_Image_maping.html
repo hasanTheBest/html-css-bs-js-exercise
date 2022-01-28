@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<title>JavaScript Image Map</title>
+		<meta charset="UTF-8">
+		
+		<script type="text/javascript">
+			function showTutorial(name){
+				document.myform.stage.value = name;
+			}
+		</script>
+	</head>
+	<body>
+		
+		
+		<form name="myform">
+			<input type="text" name="stage" size="20"/>
+		</form>
+		<! -- Create Mappings -->
+		<img src="aftabandrakib.jpg" alt="HTML Map" border="0" usemap="#tutorials"/>
+		<map name="tutorials">
+			<area shape="poly"
+					coords ="74,0,113,3,9,93,72,52,72,38,27"
+					href="/perl/index.html" alt="Perl Tutorial"
+					target="_self"
+					onMouseOver="showTutorial('perl')"
+					onMouseOut="showTutorial('')"/>
+					
+					<area shape="rect"
+					coords ="22,832,126,125"
+					href="/html/index.html" alt="HTML Tutorial"
+					target="_self"
+					onMouseOver="showTutorial('html')"
+					onMouseOut="showTutorial('')"/>
+					
+					<area shape="circle"
+					coords ="73,168,32"
+					href="/php/index.html" alt="PHP Tutorial"
+					target="_self"
+					onMouseOver="showTutorial('php')"
+					onMouseOut="showTutorial('')"/>
+		</map>
+	</body>
+</html>

@@ -1,0 +1,95 @@
+<!Doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Slider Practice One</title>
+			<style type="text/css">
+				div#container{
+					width: 700px;
+					height: 350px;
+					margin: 20px auto;
+					position: relative;
+				}
+			
+				div#slideimg img{
+					width: 700px;
+					height: 350px;
+				}
+				
+				div#left{
+					width: 80px;
+					height: 350px;
+					float: left;
+					position: absolute;
+					top: 0;
+					left: 0;
+
+				}
+				
+				div#right{
+					width: 80px;
+					height: 350px;
+					float: right;
+					position: absolute;
+					top: 0;
+						right: 0;
+				}
+				
+				div#left img{
+					position: absolute;
+					top: 40%;
+					left: 0;
+					width: 40px;
+					height: 40px;
+					opacity: 0.45;
+				}
+				
+				div#right img{
+				position: absolute;
+				top: 40%;
+				right: 0;
+				width: 40px;
+				height: 40px;
+				opacity: 0.45;
+				}
+		</style>
+		
+			<script type="text/javascript">
+				var imagecount = 1;
+				var total = 4;
+				function slider(x){
+					var image = document.getElementById("img");
+					imagecount = imagecount + x;
+					image.src = "pics/aftab"+ imagecount +".jpg";
+					if(imagecount > total){
+						imagecount = 1;
+					}
+					if(imagecount < 1){
+						imagecount = total;
+					}
+				}
+				window.setInterval(function sliderA(){
+					var image = document.getElementById("img");
+					imagecount = imagecount + 1;
+					image.src = "pics/aftab"+ imagecount +".jpg";
+					if(imagecount > total){
+						imagecount = 1;
+					}
+					if(imagecount < 1){
+						imagecount = total;
+					}
+				}, 4000);
+				
+			</script>
+		</head>
+		
+		<body onLoad="sliderA()">
+			<div id="container">
+				<div id="slideimg">
+					<img src="pics/aftab1.jpg" alt="Aftab" id="img"/>
+				</div>
+				<div id="left"><img src="pics/sprite_prev.png" onClick="slider(-1)"/></div>
+				<div id="right"><img src="pics/sprite_next.png" onClick="slider(1)"/></div>
+			</div>
+		</body>
+</html>

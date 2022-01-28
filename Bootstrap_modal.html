@@ -1,0 +1,141 @@
+<!DOCTUPE html>
+<html lang="en-us">
+<head>
+	<title>Bootstrap Modal</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+
+		<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<!--Trigger the modal with a button -->
+	<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+	
+	<!--Modal-->
+	<div id="myModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			
+			<!--Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Modal Header</h4>
+				</div>
+				<div class="modal-body">
+					<p>Some Text in the modal.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+			</div>
+		</div>
+	<div class="container">
+	<h2 class="page-header">Here is 2nd Modal Example</h2>
+	
+	<button type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#Modal">Modal Manupulation</button>
+	
+	<div id="Modal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+		
+		<div class="modal-content">
+			
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h2 class="modal-title">Mahmudul Hasan</h2>
+			</div>
+			
+			<div class="modal-body">
+				<p>Mahmudul Hasan is awsome web developer with 3 years practical experience.</p>
+			</div>
+			
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" class="close" data-dismiss="modal">Close</button>
+			</div>
+			
+		</div>
+		</div>
+		
+	</div>
+	</div>
+	
+	<!--Modal can be used for log-in-->
+	<div class="container">
+	<h2 class="page-header">Log in Modal example</h2>
+	
+	<button type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#Modal_log_in">Sign Up Modal</button>
+	
+	<div id="Modal_log_in" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-dialog-lg">
+		
+		<div class="modal-content">
+			
+			<div class="modal-header" style="background-color:darkgreen; padding:30px 15px">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title" style="color:White;"><span class="glyphicon glyphicon-sing-up"></span> SIGN UP</h4>
+			</div>
+			
+			<div class="modal-body">
+				<form role="form">
+					<div class="form-group">
+						<label for="userName"> <span class="glyphicon glyphicon-user"></span> User Name</label>
+						<input type="text" class="form-control input-lg" name="username" id="userName" placeholder="Your Name" required></input>
+					</div>
+					<div class="form-group">
+						<label for="userEmail"> <span class="glyphicon glyphicon-email"></span> Name</label>
+						<input type="email" class="form-control input-lg" name="useremail" id="userEmail" placeholder="Your Email" required></input>
+					</div>
+					<div class="form-group">
+						<label for="Password"> <span class="glyphicon glyphicon-eye-open"></span> Password</label>
+						<input type="password" class="form-control input-lg" name="password" id="Password" placeholder="Your Password" required></input>
+					</div>
+					<div class="checkbox">
+						<label><input type="checkbox" checked value="yes">Remember Me</label>
+					</div>
+					<button type="submit" class="btn btn-lg btn-success btn-block"> <span class="glyphicon glyphicon-off"></span> Sign Up</button>
+				</form>
+			</div>
+			
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left btn-lg btn-danger" class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+				<p>Forgot Password? <a href="#">Help</a></p>
+				<p>Not a member? <a href="#">Sign up</a></p>
+			</div>
+			
+		</div>
+		</div>
+		
+	</div>
+	</div>
+	
+	<div class="container">
+		<div class="jumbotron">
+			<h3>Tooltip Example</h3>
+			<a href="#" data-toggle="tooltip" title="Hasin Boss" data-placement="right">Web Mad</a>
+			
+			<h3>PopOver Example</h3>
+			<a href="#" data-toggle="popover" title="Hasin boss" data-content="Boss Of theme customization and Javascript and PHP">Toggle Popover</a>
+			
+			<h3>PopOver Example</h3>
+			<a href="#" data-toggle="popover" title="Hasin boss" data-content="Boss Of theme customization and Javascript and PHP" data-placement="bottom" data-trigger="focus">Toggle Popover</a>
+			
+			<h3>PopOver Example</h3>
+			<a href="#" data-toggle="popover" title="Hasin boss" data-trigger="hover" data-placement="top" data-content="Boss Of theme customization and Javascript and PHP">Toggle Popover</a>
+		</div>
+	</div>
+	
+	<script>
+		$(document).ready(function(){
+			$('[data-toggle="tooltip"]').tooltip();
+		});
+		
+		$(document).ready(function(){
+			$('[data-toggle="popover"]').popover();
+		});
+	</script>
+</body>
+</html>

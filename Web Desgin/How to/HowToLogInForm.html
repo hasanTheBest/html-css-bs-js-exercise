@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>How to create login form</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale= 1">
+		<link type="text/css" rel="stylesheet" href="loginForm.css"></link>
+	</head>
+	<body>
+			<form name="myForm" role="form" method="post" action="anotherPage.php">
+				<label><b>User Name</b></label>
+				<input type="text" name="uName" Placeholder="Your Name" required autocomplete autofocus></input>
+				<label><b>Password</b></label>
+				<input type="password" name="psw" placeholder="Enter Your Password" required></input>
+				<input type="checkbox" checked="checked">Remember me
+				
+				<button type="submit">Submit</button>
+				
+				<div class="container">
+					<button type="button" style="background-color:#f1f1f1" class="cancelBtn">Cancel</button>
+					<span class="psw">Forgot <a href="#">password?</a></span>
+				</div>
+			</form>
+	</body>
+</html>

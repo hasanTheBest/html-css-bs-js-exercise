@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript Array</title>
+	</head>
+	
+	<body>
+		
+		<h1 id="result"></h1>
+		
+		<script type="text/javascript">
+			/*var test_array = [10, 20, 30, 40, 50,];
+			for(i=0; i<test_array.length; i++){
+				document.getElementById("result").innerHTML += test_array[i] + " ";
+			}*/
+			
+			//array function push(); pop(); shift(); unshift(); sort();
+			
+		// push function that means a new element will be added at last positon.
+			
+			/*var test_array = [10, 20, 30, 40, 50,];
+			test_array.push(60);
+			test_array.push(70);
+			test_array.push(80);
+			for(i=0; i<test_array.length; i++){
+				document.getElementById("result").innerHTML += test_array[i] + " ";
+			}*/
+			
+		// pop fucnction that mean last element will be removed
+			
+			/*(var test_array = [10, 20, 30, 40, 50,];
+			test_array.pop();
+			for(i=0; i<test_array.length; i++){
+				document.getElementById("result").innerHTML += test_array[i] + " ";
+			}*/
+			
+		//shift function that means first element will be removed
+			
+			/*var test_array = [10, 20, 30, 40, 50,];
+			test_array.shift();
+			for(i=0; i<test_array.length; i++){
+				document.getElementById("result").innerHTML += test_array[i] + " ";
+			}*/
+			
+		// unshift function that means a new element will be added at first position
+			
+			/*var test_array = [10, 20, 30, 40, 50,];
+			test_array.unshift(60);
+			test_array.unshift("unshift function");
+			for(i=0; i<test_array.length; i++){
+				document.getElementById("result").innerHTML += test_array[i] + " ";
+			}*/
+			
+		// slice fucntion that mean new array will be created from  a remaining array
+			
+			/*var test_array = [10, 20, 30, 40, 50,];
+			var new_array = test_array.slice(1, 4);
+			for(i=0; i<new_array.length; i++){
+				document.getElementById("result").innerHTML += new_array[i] + " ";
+			}*/
+			
+		// indexOf function is used to find out index of an array element.
+			
+			/*var test_array = [10, 20, 30, 40, 50,];
+			var index = test_array.indexOf(30);
+				document.getElementById("result").innerHTML = index;*/
+			
+		//short function that means array will be decroted alphabetically
+			
+			var test_array = ["Mahmudul,", "Siam,", "Istiak,", "Ismail,", "Ikhtiar,", "Alif,", "Roni,", "Ya Ali."];
+			test_array.sort();
+			for(i=0; i<test_array.length; i++){
+				document.getElementById("result").innerHTML += test_array[i] + " ";
+			}
+		</script>
+	</body>
+</html>

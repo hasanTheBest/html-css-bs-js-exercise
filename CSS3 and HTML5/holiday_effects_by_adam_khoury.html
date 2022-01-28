@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Holliday effects</title>
+</head>
+
+<style type="text/css">
+
+	body{
+		background: #000;
+	}
+	div#lights{
+		text-align: center;
+	}
+	div.blub{
+		width: 40px;
+		height: 40px;
+		/*border-radius: 100% 8px;*/
+		display: inline-block;
+		transform: rotate(-45deg); 
+		margin: 0px 10px;
+		
+		
+	}
+	div.blub:nth-child(odd){
+		background: #c00;
+		opacity: 1;
+		box-shadow: 1px 1px 15px #c00, -1px -1px 15px #c00;
+		animation: blub_pulse1 .9s linear 0s infinite alternate;
+		border-radius: 50% 4px;
+	}
+
+	div.blub:nth-child(even){
+		background: #0c0;
+		opacity: .1;
+		box-shadow: 1px 1px 15px #0c0, -1px -1px 15px #0c0;
+		animation: blub_pulse2 .9s linear 0s infinite alternate;
+		border-radius: 8px 50% 80% 50%;
+	}
+
+	@keyframes blub_pulse1{
+		form{
+			opacity: 1;
+			box-shadow: 1px 1px 15px #c00, -1px -1px 15px #c00;
+		}to{
+			opacity: .1;
+			box-shadow: none;
+		}
+
+	}
+
+	@keyframes blub_pulse2{
+		form{
+			opacity: .1;
+			box-shadow: none;
+		}to{
+			opacity: 1;
+			
+			box-shadow: 1px 1px 15px #0c0, -1px -1px 15px #0c0;
+		}
+
+	}
+</style>
+
+<body>
+
+<div id="lights">
+	
+</div>
+
+ 
+
+<script type="text/javascript">
+	for(var i = 1; i <11; i++){
+		var blub = document.createElement("div");
+		blub.className = "blub";
+		var rand = Math.floor(Math.random() * 360) + 1;
+		blub.style.transform = "rotate(" + rand + "deg)";
+		document.getElementById("lights").appendChild(blub);
+	}
+</script>
+
+</body>
+</html>

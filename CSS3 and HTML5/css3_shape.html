@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS3 Shape</title>
+
+	<style type="text/css">
+
+		.container{
+			width: 400px;
+			height: 400px;
+			margin: 100px auto;
+		}
+/*
+		.piece{
+			width: 250px;
+			height: 150px;
+			background: rgba(0,0,0,0.5);
+			position: relative;
+			transform: rotate(-30deg) skewX(30deg);
+			
+		}
+		.piece:before, .piece:after{
+			position: absolute;
+			width: inherit;
+			height: inherit;
+			background: inherit;
+			content: '';
+		}
+		.piece:before{
+			transform: skewX(-30deg) skewX(-30deg);
+		}
+		.piece:after{
+			 transform: skewX(-30deg) rotate(-60deg) skewX(-30deg); 
+		}*/
+
+		.piece {
+		  width: 10em; height: 8.66em; /* 10*sqrt(3)/2 = 8.66 */
+		  background: rgba(0,0,0,.5);
+		}
+		.piece {
+		  position: relative;
+		  transform: rotate(-30deg) skewX(30deg);
+		}
+		.piece:before, .piece:after {
+		  position: absolute;
+		  width: inherit; height: inherit;
+		  background: inherit;
+		  content: '';
+		}
+		.piece:before { 
+			transform: skewX(-30deg) skewX(-30deg);
+
+			 }
+		.piece:after { 
+			transform: skewX(-30deg) rotate(-60deg) skewX(-30deg);
+		
+			 }
+
+		.container2{
+			width: 400px;
+			height: 400px;
+			margin: 100px auto;
+			position: relative;
+		}
+
+		.shape1{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			background: rgba(255, 0,0,.5);
+			transform: rotate(30deg) skewX(160deg);
+
+		}
+		.shape2{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			background: rgba(255, 0,0,.5);
+			transform: rotate(30deg) skewX(30deg);
+
+		}
+		.shape3{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			background: rgba(255, 0,0,.5);
+			transform: rotate(-30deg) skewX(-30deg);
+
+		}
+
+		.css_cube{
+			width: 200px;
+			height: 200px;
+			margin: auto;
+		}
+
+		.cube{
+			position: relative;
+			width: 200px;
+			transform-style: preserve-3d;
+			perspective: 800px;
+			perspective-origin: 50% 100px;
+		}
+
+		.face{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			background: rgba(0,255,0,0.2);
+		}
+
+		.back{
+			transform: translateZ(-100px) rotateY(180deg);
+		}
+
+		.right{
+			transform: rotateY(-270deg) translateX(100px);
+			transform-origin: top right;
+		}
+		.left{
+			transform: rotateY(270deg) translateZ(-100px);
+		}
+		.top{
+			transform: rotateX(-90deg) translateY(-100px);
+			transform-origin: top center;
+		}
+		.bottom{
+			transform: rotateX(90deg) translateY(100px);
+			transform-origin: bottom center;
+		}
+		.front{
+			transform: translateZ(100px);
+		}
+	</style>
+
+</head>
+<body>
+
+<div class="container">
+	<div class='piece'></div>
+</div>
+
+<div class="container2">
+	<div class='shape1'></div>
+	<div class='shape2'></div>
+	<div class='shape3'></div>
+</div>
+
+<div class="css_cube">
+	<div class="cube">
+		<div class="face front"></div>
+		<div class="face back"></div>
+		<div class="face top"></div>
+		<div class="face bottom"></div>
+		<div class="face left"></div>
+		<div class="face right"></div>
+	</div>
+</div>
+
+</body>
+</html>

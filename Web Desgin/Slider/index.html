@@ -1,0 +1,66 @@
+ <!doctype html>
+ <html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Untitled Document</title>
+		<style type="text/css">
+			#container{
+				height: 450px;
+				width: 650px;
+				margin: 20px auto;
+				position: relative;
+			}
+			#img{
+				height: 450px;
+				width: 650px;
+				position: absolute;
+			}
+			#left_holder{
+				height: 450px;
+				width: 100px;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+			}
+			#right_holder{
+				height: 450px;
+				width: 100px;
+				position: absolute;
+				right: 0px;
+				top: 0px;
+			}
+			img#left{
+				position: absolute;
+				top: 30%;
+				left: 0;
+			}
+			#right{
+				position: absolute;
+				top: 30%;
+				right: 0px;
+			}
+		</style>
+		<script type="text/javascript">
+			
+			var imagecount = 1;
+			var total = 2;
+			function slide(x){
+				var image = document.getElementById("img");
+				imagecount = imagecount + x;
+				image.src = "images/img"+imagecount+".png";
+				if(imagecount >= total){
+					imagecount = 0;
+				}
+			}
+			
+		</script>
+		
+	</head>
+	<body>
+		<div id="container">
+			<img src="images/img1.png" alt="desktop_image" id="img"></img>
+			<div id="left_holder"><img src="images/sprite_prev.png" onClick="slide(-1);" id="left"/></div>
+			<div id="right_holder"><img src="images/sprite_next.png" onClick="slide(1);" id="right"/></div>
+		</div>
+	</body>
+ </html>

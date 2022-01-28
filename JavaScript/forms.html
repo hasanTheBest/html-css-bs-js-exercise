@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title> JavaScript- Forms </title>
+		<style>
+			body{background-color: lightblue;}
+		</style>
+	</head>
+	<body>
+		<p id="welcome"> Welcome </p>
+		<form>
+			What is your name:<input type="text" id="name"/></br>
+			<input type="button" value="Done" onclick = "welcome_para();"/>
+		</form>
+		<hr></hr>
+		<!--- Again form practice -->
+		<p id ="Hate">Shame On</p>
+		<form>
+			Put the abbreviation of International Cricket Council:<input type="text" id="abr"/></br>
+			<input type="button" value="Done" onclick="hate_para();"/>
+		</form>
+		<hr></hr>
+		
+		<!--------------- JavaScript- Forms-------------->
+		<form action="another_page.php" method="post">
+			Username:<input type="text" name="username"/>
+			Password:<input type="password" name="password"/>
+			<input type="submit" value="Login"/>
+		</form>
+		
+		<script type="text/javascript">
+			
+			function welcome_para(){
+				var welcome_name = document.getElementById("welcome");
+				var name = document.getElementById("name");
+				welcome_name.innerHTML = "Welcome " + name.value;
+				}
+			// again JavaScript Form Element Practice
+			
+			function hate_para(){
+			
+				var hate_write = document.getElementById("Hate");
+				var namee = document.getElementById("abr");
+				hate_write.innerHTML = "Hate " + namee.value;
+			}
+			
+		</script>
+	</body>
+</html>

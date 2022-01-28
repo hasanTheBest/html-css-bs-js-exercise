@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Javascript- for_in_statement, try and catch, throw</title>
+		
+	</head>
+	<body>
+		<h1>Javascript- for in statement, try and catch, throw</h1>
+		<h2> 02. try ...catch() statement using for javascript</h2>
+		<input type="button" value="View massege" onClick="massege()"></br>
+		<input type="button" value="View masseg 2" onClick="message()"></br>
+		<script type="text/JavaScript">
+			var x;
+			var myCars = new Array();
+			myCars[0] = "Sab";
+			myCars[1] = "Volvo";
+			myCars[2] = "Mercidies";
+			myCars[3] = "BMW";
+			myCars[4] = "Hanif";
+			myCars[5] = "Desh Travels";
+			for(x in myCars){
+				document.write(myCars[x] + "</br>");
+				document.write("\n\n");
+			};
+			var y = "";
+			function massege()
+			{
+				try{
+					adddlert("Welcome guest");
+				}
+				catch(err){
+				y = "A error is happend. \n\n";
+				y += "Error description : " + err.description + "\n\n";
+				y += "Press ok to continue. \n\n";
+				alert(y);
+				}
+			};
+			/* try catch(err) using throw Exanple two*/
+			var a = prompt("Input Number Value Between 1 - 10", "5");
+			try{
+					if(a > 10)
+					{
+						throw "Err1";
+					}
+					else if(a < 0)
+					{
+						throw "Err2";
+					}
+					else if(isNaN(a))
+					{
+						throw "Err3";
+					}
+				}
+				catch(err){
+					if(err == "Err1"){
+						alert("Inputed Number is too large");
+					}
+					if(err == "Err2"){
+						alert("Inputed Number is too small");
+					}
+					if(err == "Err3"){
+						alert("Inputed Number is not a number");
+					}
+				};
+				var txt = "";
+				function message(){
+					try{
+						adddlert("Welcome Guest!");
+					}
+					catch(err){
+						txt = "There was an error on this page. \n\n";
+						txt += "Click ok to contine viewing this page,\n";
+						txt += "or press return to visit home page.\n\n";
+						if(! confirm(txt)){
+							document.location.href = "http://www.systechdigital.com/";
+						}
+					}
+				}
+		</script>
+		
+	</body>
+</html>

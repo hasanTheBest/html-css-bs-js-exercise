@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>HTML Image Gallary</title>
+		<meta charset="UTF-8">
+		<meta name="Image Gallary" discription="HTML5, CSS3">
+		<style type="text/css">
+			.root{
+				position: relative;
+				width: 50px;
+				height: 50px;
+				float: left;
+				margin: 10px;
+			}
+			.copy{
+				width: 500px;
+				height: auto;
+				position: absolute;
+				top: 62px;
+				left: 0px;
+				display: none;
+			}
+			div.root:hover div.copy{
+				display: block;
+				z-index: 1;
+			}
+			div.menu nav{
+				width: 100%;
+				min-height: 50px;
+				background-color: purple;
+				border: 1px solid azure;
+				border-radius: 8px;
+			}
+			div.menu ul{
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				margin: 9px 0px;
+			}
+			div.menu ul li{
+				position: relative;
+				width: 130px;
+				height: 30px;
+				float: left;
+				
+			}
+			div.menu ul li a{
+				text-decoration: none;
+				color: black;
+				line-height: 30px;
+				text-align: center;
+				display: block;
+			}
+			.active{
+				color: white;
+				font-variant: small-caps;
+				background-color: green;
+				text-shadow: 1px 1px 3px;
+				border: 1px solid azure;
+				border-radius: 8px;
+				
+			}
+			div.menu ul li a:hover{
+				color: white;
+				font-variant: small-caps;
+				background-color: green;
+				text-shadow: 1px 1px 3px;
+				border: 1px solid azure;
+				border-radius: 8px;
+
+			}
+			div.menu ul ul{
+				display: none;
+				position: absolute;
+				top: 23px;
+				width: 130px;
+				height: auto;
+				background-color: purple;
+				border-radius: 0px 0px 8px 8px;				
+			}
+			div.menu ul li:hover > ul{
+				display: block;
+				z-index: 1;
+			}
+			div.menu ul ul ul{
+				left: 130px;
+				display: none;
+				top: -8px;
+			}
+			div.menu ul li ul li:hover ul{
+				display: block;
+				z-index: 1;
+			}
+			div.from td{
+				border: none;
+				text-align: left;
+				padding: 0;
+			}
+			div.from{
+				max-width: 500px;
+				height: auto;
+				background-color: pink;
+				border: 1px solid green;
+				border-radius: 5px;
+			}
+			div.tabl{
+				max-width: 600px;
+				height: auto;
+			}
+			div.tabl #tab{
+				caption-side: bottom;
+				width: 100%;
+			}
+			div.tabl #tab, tr, td, th{
+				border: 1px solid black;
+				border-collapse: collapse;
+			}
+			div.tabl th{
+				color: white;
+				background-color: blue;
+			}
+			div.tabl tr:nth-child(odd){
+			background-color: lightBlue;
+			}
+			div.tabl tr:hover{
+				background-color: darkRed;
+				color: white;
+				text-transform: small-caps;
+			}
+			div.tabl th{
+				font-weight: bold;
+				font-size: 1.2em;
+				font-family: sans-serif, "Times New Roman";
+			}
+			div.tabl th, td{
+				text-align: center;
+				padding: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="root">
+			<div class="copy">
+				<img src="pics/journey.jpg" width="100%" height="auto"/>
+			</div>
+			<img src="pics/journey.jpg" width="100%" height="auto"/>
+		</div>
+		<div class="root">
+			<div class="copy">
+				<img src="pics/Aftab (1).jpg" width="100%" height="auto"/>
+			</div>
+			<img src="pics/Aftab (1).jpg" width="100%" height="auto"/>
+		</div>
+		<div class="root">
+			<div class="copy">
+				<img src="pics/Aftab (2).jpg" width="100%" height="auto"/>
+			</div>
+			<img src="pics/Aftab (2).jpg" width="100%" height="auto"/>
+		</div>
+		<div class="root">
+			<div class="copy">
+				<img src="pics/Aftab (3).jpg" width="100%" height="auto"/>
+			</div>
+			<img src="pics/Aftab (3).jpg" width="100%" height="auto"/>
+		</div>
+		<div class="root">
+			<div class="copy">
+				<img src="pics/Aftab (4).jpg" width="100%" height="auto"/>
+			</div>
+			<img src="pics/Aftab (4).jpg" width="100%" height="auto"/>
+		</div>
+		<div class="root">
+			<div class="copy">
+				<img src="pics/Aftab (5).jpg" width="100%" height="auto"/>
+			</div>
+			<img src="pics/Aftab (5).jpg" width="100%" height="auto"/>
+		</div>
+		<div class="root">
+			<div class="copy">
+				<img src="pics/Aftab (6).jpg" width="100%" height="auto"/>
+			</div>
+			<img src="pics/Aftab (6).jpg" width="100%" height="auto"/>
+		</div>
+		<p>
+			Here is something exist
+				Here is something exist
+				Here is something exist
+				Here is something existHere is something exist
+				Here is something exist
+				Here is something exist
+				Here is something existHere is something exist
+				Here is something exist
+				Here is something exist
+				Here is something existHere is something exist
+				Here is something exist
+				Here is something exist
+				Here is something existHere is something exist
+				Here is something exist
+				Here is something exist
+				Here is something exist
+		</p>
+		<div class="menu">
+			<nav>
+				<ul>
+					<li><a class="active" href="http://www.Facebook.com">Facebook</a></li>
+					<li><a href="http://www.Google.com">Google</a>
+						<ul>
+							<li><a href="youtube.com">YouTube</a></li>
+							<li><a href="gmail.com">Gmail</a></li>
+							<li><a href="hangout.com">Hangout</a></li>
+							<li><a href="googleplus.com">Google+</a></li>
+							<li><a href="googlesearch.com">Search</a></li>
+							<li><a href="maps.google.com">Google Map</a></li>
+						</ul>
+					</li>
+					<li><a href="http://www.Yahoo.com">Yahoo</a></li>
+					<li><a href="http://www.twitter.com">Twitter</a></li>
+					<li><a href="http://www.khan-accademy.com">Khan Accademy</a>
+						<ul>
+							<li><a href="youtube.com">Mathematics</a></li>
+							<li><a href="gmail.com">Physics</a></li>
+							<li><a href="hangout.com">Chemistry</a></li>
+							<li><a href="googleplus.com">Biology</a></li>
+							<li><a href="googlesearch.com">Computer</a>
+								<ul>
+									<li><a href="youtube.com">Mathematics</a></li>
+									<li><a href="gmail.com">Physics</a></li>
+									<li><a href="hangout.com">Chemistry</a></li>
+									<li><a href="googleplus.com">Biology</a></li>
+									<li><a href="googlesearch.com">Computer</a></li>
+									<li><a href="maps.google.com">Literature</a></li>
+								</ul>
+							</li>
+							<li><a href="maps.google.com">Literature</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="from">
+			<form>
+				<table>
+					<tr>
+						<td>Name<td>
+						<td><input name="userName" type="text" placeholder="Your Name"></input>
+					</tr>
+					<tr>
+						<td>Email<td>
+						<td><input name="userEmail" type="email" placeholder="Email Address"></input>
+					</tr>
+					<tr>
+						<td>Password<td>
+						<td><input name="userPassword" type="Password" placeholder="Your Password"></input>
+					</tr>
+					<tr>
+						<td>Date<td>
+						<td><input type="date" min="1996-03-03" max="2021-03-03"></input>
+					</tr>
+					<tr>
+						<td>Week<td>
+						<td><input type="week" min="1996-03-03" max="2021-03-03"></input>
+					</tr>
+					<tr>
+						<td>Month<td>
+						<td><input type="month" min="1996-03-03" max="2021-03-03"></input>
+					</tr>
+					<tr>
+						<td>Time<td>
+						<td><input type="time"></input>
+					</tr>
+					<tr>
+						<td>Date (Local Time)<td>
+						<td><input type="datelocal-time"></input>
+					</tr>
+					<tr>
+						<td>Man is:<td>
+						<td> Wise<input type="checkbox" checked></input>
+						<td> Fool<input type="checkbox"></input>
+						<td> Agnostic<input type="checkbox"></input>
+						<td> Wise<input type="checkbox"></input>
+					</tr>
+					<tr>
+						<td>Gender<td>
+						<td>Male<input type="radio" name="sex" value="Male"></input>
+						<td>Female<input type="radio" name="sex" value="Female"></input>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<div class="tabl">
+			<table id="tab">
+				<caption>FootBall Match Rank Table</caption>
+				<thead>
+					<tr>
+						<td colspan="5">Best NFL Quarterbacks</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th></th>
+						<th scope="col">Rating</th>
+						<th scope="col">Comp Prect</th>
+						<th scope="col">TD's</th>
+						<th scope="col">Yards</th>
+					</tr>
+					<tr>
+						<th scope="row">Aaron Roders</th>
+						<td>106.0</td>
+						<td>65.8%</td>
+						<td>106.0</td>
+						<td>65.8%</td>
+						<tr>
+						<th scope="row">Steve Young</th>
+						<td>106.0</td>
+						<td>65.8%</td>
+						<td>106.0</td>
+						<td>65.8%</td>
+					</tr>
+					<tr>
+						<th scope="row">Peyton Manning</th>
+						<td>106.0</td>
+						<td>65.8%</td>
+						<td>106.0</td>
+						<td>65.8%</td>
+					</tr>
+					<tr>
+						<th scope="row">Tom Brady</th>
+						<td>106.0</td>
+						<td>65.8%</td>
+						<td>106.0</td>
+						<td>65.8%</td>
+					</tr>
+					<tr>
+						<th scope="row">Dan Marino *</th>
+						<td>106.0</td>
+						<td>65.8%</td>
+						<td>106.0</td>
+						<td>65.8%</td>
+					</tr>
+					<tr>
+						<th scope="row">Brett Favre *</th>
+						<td>106.0</td>
+						<td>65.8%</td>
+						<td>106.0</td>
+						<td>65.8%</td>
+					</tr>
+					<tr>
+						<th scope="row">Jow Montana</th>
+						<td>106.0</td>
+						<td>65.8%</td>
+						<td>106.0</td>
+						<td>65.8%</td>
+					</tr>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="5">&copy copyright Hasan House of IT</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+	<head>
+		<title>JavaScript Browser Detection</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+	
+	<script type="text/javascript">
+		
+		//Name and Version of any Browser
+		var browser_name = navigator.appName;
+		var browser_version = navigator.appVersion;
+		var version = parseFloat(browser_version);
+		document.write("Browser Name : " + browser_name + "</br>");
+		document.write("Browser Version : " + browser_version + "</br>");
+		document.write("Browser Version : " + version + "</br>");
+		
+		//A massege will display on the basis of browser name and version
+		var browser = navigator.appName;
+		var b_version = navigator.appVersion;
+		var version_d = parseFloat(b_version);
+		if(browser == "Netscape" || browser == "Microsoft Internet Explorer" && (version_d >= 5))
+		{
+			alert("Your browser is too much good");
+		}else
+		{
+			alert("You are mostly recomended to update your browser");
+		}
+		
+		//Additional information about Browser
+		document.write("<p> Name : " + navigator.appName + "</p>");
+		document.write("<p> Version : " + navigator.appVersion + "</p>");
+		document.write("<p> Code : " + navigator.appCodeName + "</p>");
+		document.write("<p> Platform : " + navigator.platform + "</p>");
+		document.write("<p> Cooke Enabled : " + navigator.cookeEnabled + "</p>");
+		document.write("<p> User Agent header  : " + navigator.userAgent + "</p>");
+		
+		//Collect all information about visitor Browser
+		var b_detection = navigator;
+		document.write("<p> Name : " + b_detection.appName + "</p>");
+		document.write("<p> Version : " + b_detection.appVersion + "</p>");
+		document.write("<p> Code Name : " + b_detection.appCodeName + "</p>");
+		document.write("<p> Minor Version : " + b_detection.appMinorVersion + "</p>");
+		document.write("<p> CookeEnabled : " + b_detection.cookeEnabled + "</p>");
+		document.write("<p> CPU Class : " + b_detection.cpuClass + "</p>");
+		document.write("<p> OnLine : " + b_detection.onLine + "</p>");
+		document.write("<p> Platform: " + b_detection.platform + "</p>");
+		document.write("<p> User Agent : " + b_detection.userAgent + "</p>");
+		document.write("<p> Browser Language : " + b_detection.browserLanguage + "</p>");
+		document.write("<p> System Language : " + b_detection.systemLanguage + "</p>");
+		document.write("<p> User Language : " + b_detection.userLanguage + "</p>");
+		
+	</script>
+	</body>
+</html>

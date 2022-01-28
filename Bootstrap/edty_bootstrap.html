@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Overview</title>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    
+    <!--Navigation Bar Practice-->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">Hasan</a>
+            </div> <!--End of navbar Header-->
+            
+            <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Abroad</a></li>
+                        <li><a href="#">Bangla</a></li>
+                        <li class="dropdown"><a data-target="#" data-toggle="dropdown" class="dropdown-toggle dropdown">English <span class="caret"></span></a>
+							
+							<ul class="dropdown-menu">
+								<li><a href="#">American</a></li>
+								<li><a href="#">British</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Indian</a></li>
+								<li><a href="#">United State</a></li>
+							</ul>
+						</li>
+                        <li><a href="#">Arabic</a></li>
+                    </ul>
+              </div>
+        </div>
+    </nav>
+    
+    
+           <!--bootstrap Modal-->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Open Modal</button> <!--Trigger button for Model-->
+    
+    <div class="modal fade in" id="myModal" role="dialog" tabindex="-1">
+        <div class="dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" data-dismiss="modal" class="close">&times;</button>
+                <h4 class="modal-title">My First Modal</h4>
+            </div> <!-- Modal Header -->
+            
+            <div class="modal-body">
+                <div class="jumbotron text-center">
+                    <h2>Mahmudul Hasan,<br> Rajshahi University</h2>
+                </div>
+            </div> <!-- Modal Body -->
+            
+            <div class="modal-footer">
+                <p class="pull-left text-success"><small>Thank you for participating </small></p>
+                <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success">Save Changes</button>
+            </div>
+            </div> <!-- Modal Content -->
+            
+        </div> <!-- Modal Dialog -->
+    </div> <!-- Modal --> 
+	
+	    <div class="well">
+        <div>
+            <!--nav tabs-->
+           <ul class="nav nav-tabs" role="listbox">
+               <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+               <li><a href="#natore" data-toggle="tab">Natore</a></li>
+                <li><a href="#rajshahi" data-toggle="tab">Rajshahi</a></li>
+                 <li><a href="#dhaka" data-toggle="tab">Dhaka</a></li>
+                 <li><a href="#bangladesh" data-toggle="tab">Bangladesh</a></li>
+           </ul> <!--Nav Tabs End -->
+           
+            <!--tabs content-->
+			<div class="tab-content">
+           <div class="tab-pane fade in active" id="home">
+               <h3>Mahmudul Hasan</h3>
+               <p>A latent talent of developing web world</p>
+           </div>
+           
+           <div class="tab-pane fade" id="natore">
+               <h3> Hasan</h3>
+               <p>A latent talent of developing web world</p>
+           </div>
+           <div class="tab-pane fade" id="rajshahi">
+               <h3>Mahmudul</h3>
+               <p>A latent talent of developing web world</p>
+           </div>
+           <div class="tab-pane fade" id="dhaka">
+               <h3>Hasan M</h3>
+               <p>A latent talent of developing web world</p>
+           </div>
+		   <div class="tab-pane fade" id="bangladesh">
+               <h3>M Hasan</h3>
+               <p>A latent talent of developing web world</p>
+           </div>
+        </div> 
+		</div> <!--Tab Container-->
+    </div>
+	
+	<!--Nav pills-->
+	<div class="well">
+        <div>
+            <!--nav tabs-->
+           <ul class="nav nav-pills" role="listbox">
+               <li class="active"><a href="#homeP" data-toggle="pill">Home</a></li>
+               <li><a href="#natoreP" data-toggle="pill">Natore</a></li>
+                <li><a href="#rajshahiP" data-toggle="pill">Rajshahi</a></li>
+                 <li><a href="#dhakaP" data-toggle="pill">Dhaka</a></li>
+                 <li><a href="#bangladeshP" data-toggle="pill">Bangladesh</a></li>
+           </ul> <!--Nav Tabs End -->
+           
+            <!--tabs content-->
+			<div class="tab-content">
+           <div class="tab-pane fade in active" id="homeP">
+               <h3>Mahmudul Hasan</h3>
+               <p>A latent talent of developing web world</p>
+           </div>
+           
+           <div class="tab-pane fade" id="natoreP">
+               <h3> Hasan</h3>
+               <p>A latent talent of developing web world</p>
+           </div>
+           <div class="tab-pane fade" id="rajshahiP">
+               <h3>Mahmudul</h3>
+               <p>A latent talent of developing web world</p>
+           </div>
+           <div class="tab-pane fade" id="dhakaP">
+               <h3>Hasan M</h3>
+               <p>A latent talent of developing web world</p>
+           </div>
+		   <div class="tab-pane fade" id="bangladeshP">
+               <h3>M Hasan</h3>
+               <p>A latent talent of developing web world</p>
+           </div>
+        </div> 
+		</div> <!--Tab Container-->
+    </div>
+	
+	 <!--tool-tip-->
+    <div class="container">
+        <a href="#" data-toggle="tooltip" title="Mahmudul Hasan" data-placement="right">Name</a>
+        <button type="button" class="btn btn-default" data-toggle="tooltip" title="This is button">Tool Tip button</button>
+		
+		<a href="#" data-toggle="tooltip" title="Some tooltip text!">Hover over me</a>
+
+    </div> <!--End of tool tip container-->
+	
+	<div class="container">
+        <button type="button" class="btn btn-danger btn-lg" data-toggle="popover" data-title="Rajshahi Univesity" data-content="Rajshahi university one of the most repured university of Bangladesh.">University</button>
+		
+		<!--Second type of popover--->
+		 <button class="btn btn-info btn-lg" type="button" data-toggle="popover" data-title="Dismiss popOver" data-content="Click on body to close popover. This Popover includes data-trigger attribute with value of focus." data-trigger="focus">Dismiss Popover</button>
+    </div> <!--End of bootstrap Popover--->
+	
+	 <!--Bootstrap Alert-->
+    <div class="container">
+        <div class="alert alert-success">
+            <a href="#" data-dismiss="alert" class="close">&times;</a>
+            <strong>Mahmudul Hasan</strong> is a talent web developer ever seen by me.
+        </div>
+		
+		<div class="alert alert-danger fade in">
+            <a href="#" data-dismiss="alert" class="close">&times;</a>
+            <strong>Mahmudul Hasan</strong> is a talent web developer ever seen by me.
+        </div>
+		
+		<div class="alert alert-info">
+            <a href="#" data-dismiss="alert" class="close">&times;</a>
+            <strong>Mahmudul Hasan</strong> is a talent web developer ever seen by me.
+        </div>
+    </div><!--End alert-->
+	
+	<!--collapse-->
+    <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#CollapseEx">Collapse</button>
+    
+    <!--Collapse Content-->
+    <div class="collapse" id="CollapseEx">
+        <div class="well">
+            <p text-success>We are specialist in bla bla</p>
+        </div>
+    </div>
+	
+	<!--Collapse able panel group-->
+	<div class="container">
+		<div class="panel-group" id="accordion">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						<a href="#success" data-toggle="collapse" data-parent="#accordion">Success Panel</a>
+					</h3>
+				</div> <!--panel Heading-->
+				
+				<div id="success" class="panel-collapse in collapse">
+				<div class="panel-body">
+					<p>
+						<strong>Mahmudul Hasan</strong> is a talent web developer ever seen by me.
+					</p>
+				</div>
+				</div> <!--panel body collapser-->
+			</div> <!--panel success-->
+			
+			<div class="panel panel-danger">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						<a href="#danger" data-toggle="collapse" data-parent="#accordion">danger Panel</a>
+					</h3>
+				</div> <!--panel Heading-->
+				
+				<div id="danger" class="panel-collapse collapse">
+				<div class="panel-body">
+					<p>
+						<strong>Mahmudul Hasan</strong> is a talent web developer ever seen by me.
+					</p>
+				</div>
+				</div> <!--panel body collapser-->
+			</div> <!--panel danger-->
+			
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						<a href="#info" data-toggle="collapse" data-parent="#accordion">Information Panel</a>
+					</h3>
+				</div> <!--panel Heading-->
+				
+				<div id="info" class="panel-collapse collapse">
+				<div class="panel-body">
+					<p>
+						<strong>Mahmudul Hasan</strong> is a talent web developer ever seen by me.
+					</p>
+				</div>
+				</div> <!--panel body collapser-->
+				
+			</div> <!--panel Info-->
+
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="jumbtron">
+			<h2 class="text-center">Mahmudul Hasan</h2>
+			<h4 class="text-center">Rahshahi University</h4>
+		</div>
+		<nav class="navbar navbar-default" data-spy="affix">
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Home</a></li>
+			</ul>
+		</nav>
+		
+		<div class="jumbtron">
+			<h2 class="text-center">Mahmudul Hasan</h2>
+			<h4 class="text-center">Rahshahi University</h4>
+		</div>
+		<div class="jumbtron">
+			<h2 class="text-center">Mahmudul Hasan</h2>
+			<h4 class="text-center">Rahshahi University</h4>
+		</div>
+		<div class="jumbtron">
+			<h2 class="text-center">Mahmudul Hasan</h2>
+			<h4 class="text-center">Rahshahi University</h4>
+		</div>
+		<div class="jumbtron">
+			<h2 class="text-center">Mahmudul Hasan</h2>
+			<h4 class="text-center">Rahshahi University</h4>
+		</div>
+		<div class="jumbtron">
+			<h2 class="text-center">Mahmudul Hasan</h2>
+			<h4 class="text-center">Rahshahi University</h4>
+		</div>
+	</div>
+		
+
+				<script>
+					$(document).ready(function(){
+						$('[data-toggle="tooltip"]').tooltip(); 
+					});
+				</script>
+    
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

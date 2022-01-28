@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>html5 cnavas tag</title>
+		<chatset="UTF-8">
+		<style type="text/css">
+			#colorful{
+				width: 430px;
+				height: 280px;
+				border: 1px solid black;
+				margin: 0 auto;
+			}
+			#toggleDiv{
+				width: 320px;
+				height: 240px;
+				margin: auto;
+				border: 1px solid green;
+				background-color: hotpink;
+			}
+		</style>
+		<script type="text/javascript">
+			function init(){
+				var randomColor = document.getElementsByTagName("div");
+				randomColor[0].onclick = changeColor;
+			}
+			function changeColor(){
+				//this.innerHTML = "Click Again";
+				var randomC = '#'+Math.floor(Math.random()*16777215).toString(16);
+				this.style.background = randomC;
+			}
+		
+			onload = init;
+			function toggle_div(){
+				var toggle = document.getElementById("toggleDiv");
+				var yesOrNot = toggle.style.visibility != "visible";
+				toggle.style.visibility = yesOrNot ? "visible" : "hidden";
+			}
+		</script>
+	</head>
+	<body>
+		<div id="colorful"><h1>This is random colorful div</h1></div>
+		<div id="toggleDiv">This is another Div</div><a href="javascript:toggle_div();">Toggle Div</a>
+	</body>
+</html>

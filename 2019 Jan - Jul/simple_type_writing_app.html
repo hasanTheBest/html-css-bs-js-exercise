@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple type  writing  Game</title>
+</head>
+<body>	
+	<div style="text-align: center;">
+		<h2>Type Writting Game</h2>
+		<p>You have left 5 seconds to write</p>
+		<h3 id="display-word">DISPLAY</h3>
+		<form id="form">
+			<input type="text" autofocus required id="input-word" autocomplete="off">
+			<input type="submit" value="Enter" id="enter">
+		</form>
+		<p><b id="result"></b><button type="button" id="start-again" style="display:none;">Start Again</button></p>
+		<p>Time Count: <span id="count">0</span></p>
+		<p>Score Count: <span id="score">0</span></p>
+	</div>
+	
+	<script type="text/javascript">
+	
+		var time=10;
+		var score=0;
+		var isPlaying;
+		var clrInterval;
+		var words=["buff","cedar","goddess","access","run","Tony","pour","fathom","defunct","extern","Pepsi","excess","event"];
+		
+		const display = document.querySelector("#display-word");
+		const counter = document.querySelector("#count");
+		const scoreDisplay = document.querySelector("#score");
+		const input = document.querySelector("#input-word");
+		const result = document.querySelector("#result");
+		const wordForm = document.querySelector("#form");
+		const startAgain = document.querySelector("#start-again");
+		const enter = document.querySelector("#enter");
+		
+		window.addEventListener("load", initGame);
+		
+		function initGame(){
+			
+			displayWord();
+			enterWord();
+			clrInterval = setInterval(timeCounter, 1000);
+			
+		}
+		
+		function displayWord(){
+			//alert(Math.floor(Math.random() * words.length));
+			var index = Math.floor(Math.random() * words.length);
+			display.innerHTML = words[index];
+		}
+		
+		function enterWord(){
+			wordForm.addEventListener("submit", matchWord);
+			//isPlaying = true;
+		}
+		
+		function matchWord(e){
+			e.preventDefault();
+			if(input.value === display.textContent){
+				score++;
+				result.innerHTML ="Success";
+				scoreDisplay.innerHTML = score;
+				input.value = "";
+				displayWord();
+			}else{
+				result.innerHTML ="Incorrect";
+			}
+		}
+		
+		function timeCounter(){
+			if(0===time){
+				//isplaying = false;
+				result.innerHTML = "Game is Over";
+				count.innerHTML = 0;
+				
+				input.setAttribute("disabled", "disabled");
+				enter.setAttribute("disabled", "disabled");
+				startAgain.style.display ="inline-block";
+				highScore();
+				clearInterval(clrInterval);
+			}else{
+				count.innerHTML = time;
+				time--;
+			}
+			
+		}
+		
+		startAgain.addEventListener("click", function(){
+			time=10;
+			score=0;
+			input.value ="";
+			this.style.display="none";
+			input.removeAttribute("disabled");
+			enter.removeAttribute("disabled");
+			result.innerHTML ="";
+			scoreDisplay.innerHTML= score;
+			initGame();
+		});
+		
+		// Set High Score in Local Storage
+		function highScore(){
+			if(null===localStorage.getItem("highScore")){
+				localStorage.setItem("highScore", score);
+				//console.log(localStorage.getItem("highScore"));
+			}else{
+				if(score > localStorage.getItem("highScore")){
+					localStorage.setItem("highScore", score);
+					
+					var name = prompt("Your Name Please","User");
+					if(null !=name || "" != name){
+						alert("Congratulation "+name+" ! You've scored the highest: "+score);
+					}
+					//console.log(localStorage.getItem("highScore"));
+				}
+			}
+		}
+		
+	</script>
+</body>
+</html>

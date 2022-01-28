@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link href="style.css" type="text/css" rel="stylesheet"></link>
+		<title>The form element advanced</title>
+	</head>
+	<body>
+		<form>
+			<h1>HTML Form Element</h1>
+			<hr>
+			<table>
+				<tr>
+					<td>Name</td>
+					<td><input type="text" name="username" placeholder="insert your name" required autofocus autocomplete></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input type="email" name="ueremail" placeholder="insert your email" required autocomplete></td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td><input type="password" name="password" placeholder="insert your password"  required></td>
+				</tr>
+				<tr>
+					<td>Birthday</td>
+					<td><input type="date" min="1995-03-03" max="2016-12-12" required></td>
+				</tr>
+				<tr>
+					<td>Birthday (Month)</td>
+					<td><input type="month" min="1995-03-03" max="2016-12-12" ></td>
+				</tr>
+				<tr>
+					<td>Birthday (Week)</td>
+					<td><input type="week" min="1995-03-03" max="2016-12-12"></td>
+				</tr>
+				<tr>
+					<td>Date and Time</td>
+					<td><input type="datetime-local"></td>
+				</tr>
+				<tr>
+					<td>Rate our Site</td>
+					<td><input type="number" min="0" max="10"></td>
+				</tr>
+				<tr>
+					<td>Time</td>
+					<td><input type="time"></td>
+				</tr>
+				<tr>
+					<td>Enter Your Web Site name</td>
+					<td><input type="url"></td>
+				</tr>
+				<tr>
+					<td>Search</td>
+					<td><input type="search" placeholder="Search here"></td>
+				</tr>
+				<tr>
+					<td>Upload Your images</td>
+					<td><input type="file" multiple placeholder="Upload here"></td>
+				</tr>
+				<tr>
+					<td>Enter Your Country</td>
+					<td>
+						<select value="country">
+							<option name="australia">Australia</option>
+							<option name="singapur">Singapur</option>
+							<option name="pakistan">Pakistan</option>
+							<option name="bangladesh">Bangladesh</option>
+							<option name="india">India</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Select Your country</td>
+					<td>
+						<input list="country_list">
+							<datalist id="contry_list">
+								<option name="australia">Australia</option>
+								<option name="singapur">Singapur</option>
+								<option name="pakistan">Pakistan</option>
+								<option name="bangladesh">Bangladesh</option>
+								<option name="india">India</option>
+							</datalist>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="button" value="submit"></td>
+				</tr>
+			</table>
+			<tr>
+				<td>Rate our Site</td>
+				<td><input type="range" min="0" max="8" step="2"></td>
+			</tr>
+			<br>
+			<tr>
+				<td>Chose Your color</td>
+				<td><input type="color"></td>
+			</tr>
+
+			</form>
+	</body>
+</html>

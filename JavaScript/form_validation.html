@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Form Validation Practic</title>
+	</head>
+	<body>
+		<h1>JavaScript Form Validation Tutorial Practice</h1>
+		<form action="another_page.html" method="post" onsubmit="return welcome_man();">
+			User Name:<input type="text" name="username" id="username"/>
+			Password:<input type="password" name="password" id="pass" />
+			<input type="submit" value="Done"/>
+		</form>
+		<script type="text/javascript">
+			function welcome_man(){
+				var user = document.getElementById("username").value;
+				var password = document.getElementById("pass").value;
+				
+				if (user == "" || password == ""){
+					alert("please fill in all input fields");
+					return false;
+				}
+				else{
+					return true;
+				}
+					}	
+		</script>
+	</body>
+	</html>

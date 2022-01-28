@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Conditional_Statement</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+	</body>
+		<!--<script type="text/javascript">
+			var prem = "Laili plus Muznu";
+			//var prem = "Devdas Babazi";
+			if(prem == "Laili plus Muznu"){
+				document.write("Welldone it is certified by the authers.");
+			}
+			else{
+				document.write("Go to the wild. Society can'nt recognize this type of relationship.");
+			}
+		</script>//-->
+		<!--<script type="text/javascript">
+			var d = new Date();
+			var time = d.getHours();
+			if (time < 20){
+				document.write("<b>Good day</b>");
+			}
+			else{
+				document.write("<b>Good night</b>");
+		}
+		</script>//-->
+		<!--<script type="text/javascript">
+			var d = new Date();
+			var time = d.getHours();
+			if (time < 10){
+				document.write("<h1>Good Morning</h1>");
+			}
+			else if (time >= 10 && time <= 19){
+				document.write("<h1>Good day</h1>");
+			}
+			else{
+				document.write("<h1>Good Night</h1>");
+			}
+		</script>//-->
+		<script type="text/javascript">
+			var d = new Date();
+			theDay = d.getDay();
+			switch (theDay){
+				case 5:
+				document.write("<b>Finally Friday</b>");
+				break;
+				case 6:
+				document.write("<b>Super Saturday</b>");
+				break;
+				case 0:
+				document.write("<b>Sleepy Sunday</b>");
+				break;
+				case 3:
+				document.write("<b>This is my work Day</b>");
+				break;
+				default:
+				document.write("<b>I'm really looking forward to this weekend!</b>");
+				break;
+			}
+		</script>
+		<p>This Javascript will generate a different greeting based on what day it is. Note that Sunday = 0, 
+		Monday = 1, Tuesday = 2, etc.</p>
+	</body>
+	</html>

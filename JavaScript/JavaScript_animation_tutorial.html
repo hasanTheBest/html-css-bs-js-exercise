@@ -1,0 +1,68 @@
+<!doctye html>
+<html lang="en">
+	<head>
+		<title>Javascript Animation Tutorial</title>
+		<script type="text/javascript">
+			
+			var imgObj = null;
+			function init()
+			{
+				imgObj = document.getElementById("myImages");
+				imgObj.style.position = "relative";
+				imgObj.style.left = "0px";
+			}
+			function moveRight()
+			{
+				imgObj.style.left = parseInt(imgObj.style.left) + 50 + "px";
+			}
+			//window.onload = init;
+			
+			var img = null;
+			var animate;
+			function launch()
+			{
+				img = document.getElementById("images");
+				img.style.position = "relative";
+				img.style.left = "0px";
+			}
+			function start_animation()
+			{
+				img.style.left = parseInt(img.style.left) + 1 + "px";
+				animate = setTimeout(start_animation, 10)
+			}
+			function stop_animation ()
+			{
+				clearTimeout(animate);
+				img.style.left = "0px";
+			}
+			window.onload = launch;
+			
+			if(document.images){
+			var pic1 = new Array();
+			pic1.src = "mehedi.jpg";
+			var pic2 = new Array();
+			pic2.src = "aftabandrakib.jpg";}
+		</script>
+	</head>
+	<body>
+		<form>
+			<img id="myImages" src="aftabandrakib.jpg" width="50%" height="50%" alt="Aniamtion Images"/>
+			<p>Click button below to move the image to right</p>
+			<input type="button" value="Click me" onClick="moveRight();"></br>
+			
+			<!--Another javascript animation example-->
+			<img src="mehedi.jpg" alt="Aftab" width="50%" height="auto" id="images">
+			<p>Click button below to handle animation</p>
+			<input type="button" value="Animation Start"/ onClick="start_animation();"/>
+			<input type="button" value="Animation Stop"/ onClick="stop_animation();"/>
+			
+			<!--onMouseOver and onMouseOut event example --->
+			<p>Mouse over the Images to see How it works</p>
+			<a href="#" onMouseOver="document.pic.src = pic2.src;";
+				onMouseOut="document.pic.src = pic1.src;">
+			<img src="mehedi.jpg" alt="Aftab" width="50%" height="auto" name="pic"
+			/>
+			</a>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Adding Map with a Marker</title>
+
+<style type="text/css">
+	header{
+		width: 100%;
+		height: 100px;
+		text-align: center;
+		background-color: rgba(0,0,255,0.6);
+		color: white;
+	}
+	header h2{
+		font-family: Comic Sans Serif;
+		letter-spacing: 6px;
+		text-transform: uppercase;
+		color: inherit;
+		font: 65px;
+	}
+	footer{
+		text-align: center;
+		font: 18px;
+		font-style: italic;
+		color: #e3e3e3;
+	}
+
+	main{
+		background-color: rgba(0,0,0,0.1);
+	}
+
+	#map_holder{
+		width: 100%;
+		height: 400px;
+		border: 15px solid rgba(0,0,255,0.8);
+		border-radius: 10px;
+		box-sizing: border-box;
+		box-shadow: 0px 15px 10px 5px rgba(0,0,0,0.2);
+	}
+
+</style>
+
+
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+
+</head>
+<body>
+
+<header>
+<h2>Google Maps APIs</h2>
+<footer>Developed by Mahmudul Hasan</footer>
+</header>
+
+<main>
+	<div id="map_holder"></div>
+</main>
+
+
+<script type="text/javascript">
+	
+	function mapMaker() {
+
+		var rajshahi = {lat: 24.365824 , lng: 88.622653}
+		var map = new google.maps.Map(document.getElementById('map_holder'),{ 
+				zoom: 16,
+				center: rajshahi
+			});
+
+			var mapMarker = new google.maps.Marker({
+				position: rajshahi,
+				map: map
+			});
+
+		
+
+	}
+
+google.maps.event.addDomListener(window, 'load', mapMaker);
+</script>
+
+
+
+</body>
+</html>

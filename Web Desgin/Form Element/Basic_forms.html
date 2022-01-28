@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Basic Forms</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css" type="text/css">
+	</head>
+	<body>
+		<div class="pageHolder">
+			<div class="titleBar">
+				<div class="titleHolder">
+					<div class="left">30</div>
+					<div class="left">40</div>
+					<div class="left">!0</div>
+				</div>
+			</div>
+			<div class="formHolder">
+				<h2>BASIC FORMS</h2>
+				<hr id="hro">
+				<p id="dashed"><i>This is dummy text, you can replace it with your original text.</i></P>
+				<div class="formLeft">
+					<div class="basicForm">
+						<form action="anotherPage.php" method="get">
+							<h3>BASIC FORM</h3>
+							<span>Enter Name</span></br>
+							<input type="text" name="name" placeholder="Your Name" required/>
+							<p>Help text here.</p>
+							
+							<span>Enter Email</span></br>
+							<input type="email" name="email" placeholder="Your Email" required/>
+							<p>Help text here.</p>
+							
+							<span>Text Area</span></br>
+							<textarea cols="15" rows="300" style="height: auto">Write Your Massege Here</textarea>
+							<input type="submit" name="submit" value="Send Message"/>
+						</form>
+					</div>
+					<div class="formElement">
+						<form name="myForm" action="anotherPage.php" method="get">
+							<h3>FORM ELEMENTS</h3>
+							<div class="container">
+							<h4>Checkboxes</h4>
+							<input type="checkbox" name="car" value="volvo" checked/> Checbox Example two</br>
+							<input type="checkbox" name="car" value="volvo"/> Checbox Example Three<br/>
+							<input type="checkbox" name="car" value="volvo"/> Checbox Example Four<br/>
+							<input type="checkbox" name="car" value="volvo"/> Checbox Example Five</br>
+							<hr>
+
+							
+							<h4>Radio Button Example</h4>
+							<input type="radio" name="car" value="volvo"/> Checbox Example two</br>
+							<input type="radio" name="car" value="volvo"/> Checbox Example Three</br>
+							<input type="radio" name="car" value="volvo"/> Checbox Example Four</br>
+							<input type="radio" name="car" value="volvo"/> Checbox Example Five
+							<hr>
+							
+							<h4>Select Example</h4>
+								<select name="country">
+									<option value="america">America</option>
+									<option value="america">America</option>
+									<option value="america">America</option>
+									<option value="america">America</option>
+									<option value="america">America</option>
+									<option value="america">America</option>
+								</select>
+								
+							<h4>Select Example with datalist</h4>								
+							<input list="country" id="data"/>
+								<datalist id="country">
+									<option value="america">America</option>
+									<option value="america">America</option>
+									<option value="america">America</option>
+									<option value="america">America</option>
+									<option value="america">America</option>
+									<option value="america">America</option>
+								</datalist>
+
+
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="formRight">
+					<div class="signupForm">
+						<form action="another.php" method="post">
+								<h3>SIGNUP FORM</h3>
+
+										<span>Enter Email</span></br>
+										<input type="email" name="email" placeholder="Your Email" required/>
+										<p>Help text here.</p>
+										
+										<span>Enter Password</span></br>
+										<input type="password" name="password" placeholder="Your Password" required/>
+										<p>Help text here.</p>
+										
+										<span>Retype Password</span></br>
+										<input type="password" name="password" placeholder="Retype Password" required/>
+										<p>Help text here.</p>
+										<input type="submit" name="register" value="Register"/>
+							</form>
+					</div>
+					<div class="sideInfo">
+						<form>
+							<h4>Other Group Examples</h4>
+							<span>Go!</span><input type="search" name="search"/></br>
+							<input type="search" name="search"/><span>Go!</span>
+						</form>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>

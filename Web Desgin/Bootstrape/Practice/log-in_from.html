@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Bootstrape Example</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width ,initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+	</head>
+	<body>
+		<div class="container">
+			<h1>My First Bootstrape Page</h1>
+			<p>This is some content.</p>
+			
+			<div class="jumbotron">
+				<h1>Bootstrape Tutorial</h1>
+				<p>Bootstrape id the most populat HTML, CSS, and JS fraamework for developing responsive, moile-first projects on the web.</p>
+			</div>
+			
+			<div class="page-header">
+				<h1>Page Header Example</h1>
+			</div>
+			<form action="another.php" method="get" name="myForm" role="form">
+				<div class="form-group">
+					<label for="User" class="sr-only">Enter Your Name:</label>
+					<input type="text" id="User" class="form-control" placeholder="Enter Your Name">
+				</div>
+				
+				<div class="form-group">
+					<label for="psd" class="sr-only">Enter Your Password</label>
+					<input type="password" id="psd" class="form-control" placeholder="Enter Your Password">
+				</div>
+				
+				<div class="checkbox">
+					<label><input type="checkbox"> Remember me</label>
+				</div>
+				
+				<div class="form-group">
+					<label for="select" class="sr-only">Selecty Your Bus</label>
+					<select name="interest" class="form-control" id="select">
+						<option value="volvo">Volvo</option>
+						<option value="volvo">Sab</option>
+						<option value="volvo">Desh Travels</option>
+						<option value="volvo">Keya</option>
+						<option value="volvo">Hanif</option>
+					</select>
+				</div>
+				
+				<button type="submit" class="btn btn-default">Submit</button>
+			</form>
+			
+			<h2>Form Horizontal</h2>
+			<form role="form" class="form-horizontal">
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="user" > Your name</label>
+					<div class="col-sm-10">
+						<input type="text" id="user" class="form-control" placeholder="Enter Your Name" autocomplete>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="pwd"> Your Password</label>
+					<div class="col-sm-10">
+						<input type="passsword" id="pwd" class="form-control" placeholder="Enter Your Password">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="email"> Your Email</label>
+					<div class="col-sm-10 disabled">
+						<input type="email" id="email" class="form-control" placeholder="Enter Your Email" disabled>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="select" class="control-label col-sm-2">Select Your Country</label>
+					<div class="col-sm-10">
+						<select name="country" class="form-control" id="select">
+							<option value="Bangladesh">Bangladesh</option>
+							<option value="India">India</option>
+							<option value="Pakistan">Pakistan</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="select" class="control-label col-sm-2">Select Your faviroute country(multiple)</label>
+					<div class="col-sm-10">
+						<select name="country" class="form-control" id="select" multiple>
+							<option value="Bangladesh">Bangladesh</option>
+							<option value="India">India</option>
+							<option value="Pakistan">Pakistan</option>
+							<option value="Srilanka">Srilanka</option>
+							<option value="Nepal">Nepal</option>
+							<option value="Bhutan">Bhutan</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="comment">Comment Here</label>
+					<div class="col-sm-10">
+						<textarea class="form-control col-sm-10" placeholder="Type Your Comment" cols="5" rows="7" id="comment"></textarea>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="radio">Your Reliogon</label>
+					<div class="col-sm-10">
+						<div class="radio-inline">
+							 <label><input type="radio" name="reliogon" id="radio"> Muslim</label>
+						</div>
+						<div class="radio-inline diabled">
+							 <label><input type="radio" name="reliogon" id="radio" disabled> Hindu</label>
+						</div>
+						<div class="radio-inline">
+							 <label><input type="radio" name="reliogon" id="radio"> Christan</label>
+						</div>
+						<div class="radio-inline">
+							 <label><input type="radio" name="reliogon" id="radio"> Budhu</label>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<div class="checkbox">
+							<label><input type="checkbox"></input> Remember me</label>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" class="btn btn-default">Submit</button>
+					</div>
+				</div>
+			</form>
+			
+			<h3>Bootstrap Form Control States</h3>
+			<form class="form-horizontal" role="form">
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Focused</label>
+					<div class="col-sm-10">
+						<input type="text" id="focusedInput" class="form-control" value="Click to Focus"></input>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Email</label>
+					<div class="col-sm-10">
+						<input type="text" id="disabledInput" class="form-control" placeholder="disabled input type" disabled></input>
+					</div>
+				</div>
+				<fieldset disabled>
+				<legend>Form List Here</legend>
+				<div class="form-group">
+					<label class="col-sm-2 control-label" for="disabledTextInput">Fieldset disabled</label>
+					<div class="col-sm-10">
+						<input type="text" id="disabledTextInput" class="form-control" va></input>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label" for="disabledSelect"></label>
+					<div class="col-sm-10">
+						<select id="disabledSelect" class="form-control">
+							<option>Disabled select</option>
+							<option>Disabled select</option>
+							<option>Disabled select</option>
+							<option>Disabled select</option>
+						</select>
+					</div>
+				</div>
+				</fieldset>
+				
+				<div class="form-group has-success has-feedback">
+					<label class="col-sm-2 control-label" id="inputSuccess">Enter Your Name</label>
+					<div class="col-sm-10">
+						<input type="text" id="inputSuccess" class="form-control" placeholder="Enter Your Name">
+						<span class="glyphicon glyphicon-ok form-control-feedback"></span>
+						<span class="help-block">This input field is Correct</span>
+					</div>
+				</div>
+				<div class="form-group has-warning has-feedback">
+					<label class="control-label col-sm-2" for="inputWarning">Your Home  District</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" placeholder="Your District">
+						<span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+						<span class="help-block">This input has warning sign, Check again</span>
+					</div>
+				</div>
+				<div class="form-group has-error has-feedback">
+					<label class="control-label col-sm-2" for="inputError">Your Home  Thana</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" placeholder="Your Thana">
+						<span class="glyphicon glyphicon-remove form-control-feedback"></span>
+						<span class="help-block">This input has error</span>
+					</div>
+				</div>
+				<h3>Input Sizing</h3>
+				<div class="form-group form-group-lg">
+					<label class="control-label col-sm-2" for="user" > Your name</label>
+					<div class="col-sm-10">
+						<input type="text" id="user" class="form-control" placeholder="Enter Your Name" autocomplete>
+					</div>
+				</div>
+				<div class="form-group form-group-sm">
+					<label class="control-label col-sm-2" for="user" > Your name</label>
+					<div class="col-sm-10">
+						<input type="text" id="user" class="form-control" placeholder="Enter Your Name" autocomplete>
+					</div>
+				</div>
+				<h3>Column Sizing</h3>
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="user" > Your name</label>
+					<div class="col-xs-5">
+						<input type="text" id="user" class="form-control" placeholder="Enter Your Name" autocomplete>
+					</div>
+				</div>
+			</form>
+		</div>
+		
+		
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	</body>
+</html>

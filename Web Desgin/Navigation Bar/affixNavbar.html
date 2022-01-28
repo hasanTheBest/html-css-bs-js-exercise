@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Nav Bar Affix</title>
+		<style>
+			body{
+				margin: 0;
+				padding: 0;
+				font-family: arial;
+			}
+			nav{
+				dispaly: block;
+				width: 100%;
+				height: auto;
+				position: fix;
+				top: 0;
+				left: 0;
+			}
+			ul{
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				background-color: rgba(0, 255, 255, 0.38);
+				min-height: 50px;
+				margin-bottom: 10px;
+			}
+			ul li{
+				line-height: 31px;
+				float: left;
+				padding: 9px 3px;
+			}
+			ul li a{
+				color: purple;
+				text-decoration: none;
+				padding: 5px 12px;
+				background-color: aqua;
+				border-radius: 5px;
+			}
+			ul li a:hover{
+				border: 1px solid hotpink;
+				border-radius: 3px;
+			}
+			ul.second li{
+				width: 22%;
+				padding: 1%;
+			}
+			ul.second li a{
+				width: 100%;
+				margin: 0;
+				padding: 0 5px;
+				display: block;
+			}
+			ul.third{
+				background-color: #f4f4f4;
+			}
+			
+			ul.third li{
+				width: 20%;
+				margin: 0;
+				padding: 8px 0 0 0;
+			}
+			ul.third li:first-child{
+				border-bottom: 3px solid green;
+				color: green;
+			}
+			ul.third li:nth-child(2){
+				border-bottom: 3px solid blue;
+				color: blue;
+			}
+			ul.third li:nth-child(3){
+				border-bottom: 3px solid hotpink;
+				color: hotpink;
+			}
+			ul.third li:nth-child(4){
+				border-bottom: 3px solid aqua;
+				color: aqua;
+			}
+			ul.third li:last-child{
+				border-bottom: 3px solid red;
+				color: red;
+			}
+
+			ul.third li a {
+				padding: 0 5px;
+				display: block;
+				background-color: #f4f4f4;
+				color: black;
+				border-radius: 0;
+			}
+			ul.third li a:hover{
+				border-top: 1px solid #eee;
+				border-left: 1px solid #eee;
+				border-right: 1px solid #eee;
+				border-bottom: none;
+				border-radius: 5px 5px 0 0;
+				background-color: rgba(255, 255, 255, 0.8);
+				text-shadow: 0 2px 2px 0.9;
+			}
+			
+			
+			
+			
+		</style>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Tutorial</a></li>
+				<li><a href="#">HTML</a></li>
+				<li><a href="#">CSS</a></li>
+				<li><a href="#">JavaScript</a></li>
+				<li><a href="#">Jquery</a></li>
+				<li><a href="#">PHP</a></li>
+			</ul>
+			
+			<ul class="second">
+				<li><a href="#">HTML</a></li>
+				<li><a href="#">CSS</a></li>
+				<li><a href="#">JavaScript</a></li>
+				<li><a href="#">Bootstrap</a></li>
+			</ul>
+			
+			<ul class="third">
+				<li><a href="#">HTML</a></li>
+				<li><a href="#">CSS</a></li>
+				<li><a href="#">JavaScript</a></li>
+				<li><a href="#">Bootstrap</a></li>
+				<li><a href="#">Jquery</a></li>
+			</ul>
+		</nav>
+	</body>
+</html>
